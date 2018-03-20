@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}PREMADE{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Premade"/>
+    <meta name="keywords" content="Premade"/>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+    <!-- Style -->
+    <link rel="stylesheet" href="{{ asset('css/style_login.css') }}">
+
+</head>
+<body>
+<div>
+    {% block body %}{% endblock %}
+</div>
+
+<!-- jQuery -->
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+<!-- Bootstrap -->
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#login-modal").modal({keyboard: false, backdrop: 'static'}).show();
+    });
+</script>
+</body>
+</html>
+
