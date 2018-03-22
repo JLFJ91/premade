@@ -77,9 +77,3 @@ fos_user:
     from_email:
         address: "%mailer_user%"
         sender_name: "%mailer_user%"
-
-sonata_block:
-    default_contexts: [sonata_page_bundle]
-    blocks:
-        sonata.admin.block.admin_list:
-            contexts: [admin]
