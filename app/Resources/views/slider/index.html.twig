@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Sliders list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titulo</th>
+                <th>Contenido</th>
+                <th>Tipo</th>
+                <th>Url</th>
+                <th>Overlay</th>
+                <th>Textcolor</th>
+                <th>Textalign</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for slider in sliders %}
+            <tr>
+                <td><a href="{{ path('slider_show', { 'id': slider.id }) }}">{{ slider.id }}</a></td>
+                <td>{{ slider.titulo }}</td>
+                <td>{{ slider.contenido }}</td>
+                <td>{{ slider.tipo }}</td>
+                <td>{{ slider.url }}</td>
+                <td>{% if slider.overlay %}Yes{% else %}No{% endif %}</td>
+                <td>{{ slider.textColor }}</td>
+                <td>{{ slider.textAlign }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('slider_show', { 'id': slider.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('slider_edit', { 'id': slider.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('slider_new') }}">Create a new slider</a>
+        </li>
+    </ul>
+{% endblock %}

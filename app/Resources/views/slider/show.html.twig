@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Slider</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ slider.id }}</td>
+            </tr>
+            <tr>
+                <th>Titulo</th>
+                <td>{{ slider.titulo }}</td>
+            </tr>
+            <tr>
+                <th>Contenido</th>
+                <td>{{ slider.contenido }}</td>
+            </tr>
+            <tr>
+                <th>Tipo</th>
+                <td>{{ slider.tipo }}</td>
+            </tr>
+            <tr>
+                <th>Url</th>
+                <td>{{ slider.url }}</td>
+            </tr>
+            <tr>
+                <th>Overlay</th>
+                <td>{% if slider.overlay %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Textcolor</th>
+                <td>{{ slider.textColor }}</td>
+            </tr>
+            <tr>
+                <th>Textalign</th>
+                <td>{{ slider.textAlign }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('slider_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('slider_edit', { 'id': slider.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

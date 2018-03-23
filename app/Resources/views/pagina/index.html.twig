@@ -1,0 +1,65 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}
+    PÁGINAS - {{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('assets/datatables/data-tables.bootstrap4.min.css') }}">
+{% endblock %}
+
+{% block body %}
+    <section class="section-table cid-qN6ZXrad2L" id="table1-1">
+        <div class="container container-table">
+
+            <div class="row justify-content-between">
+                <div class="col-auto">
+                    <h2 class="mbr-section-title mbr-fonts-style pb-3 display-2">
+                        Páginas
+                    </h2>
+                </div>
+                <div class="col-auto"><a href="{{ path('paginas_new') }}" class="btn btn-outline-primary btn-sm"><span class="mbri-plus mbr-iconfont mbr-iconfont-btn"></span> Añadir</a></div>
+            </div>
+            <div class="table-wrapper">
+                <div class="container">
+
+                </div>
+                <div class="container scroll">
+                    <table class="table" cellspacing="0">
+                        <thead>
+                        <tr class="table-heads ">
+                            <th class="head-item mbr-fonts-style display-7">
+                                Titulo
+                            </th>
+                            <th class="head-item mbr-fonts-style display-7">
+                                Fecha Creación
+                            </th>
+                            <th class="head-item mbr-fonts-style display-7">
+                                Acciones
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for pagina in paginas %}
+                            <tr>
+                                <td class="body-item mbr-fonts-style display-7">{{ pagina.titulo }}</td>
+                                <td class="body-item mbr-fonts-style display-7">{% if pagina.createdAt %}{{ pagina.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                                <td class="body-item mbr-fonts-style display-7"><a href="{{ path('paginas_edit', { 'id': pagina.id }) }}">Editar</a></td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container table-info-container">
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('assets/dropdown/js/script.min.js') }}"></script>
+    <script src="{{ asset('assets/datatables/jquery.data-tables.min.js') }}"></script>
+    <script src="{{ asset('assets/datatables/data-tables.bootstrap4.min.js') }}"></script>
+{% endblock %}

@@ -1,41 +1,38 @@
-
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="es"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="es"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang="es"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="es"> <!--<![endif]-->
-	<head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{% block title %}PREMADE{% endblock %}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Premade" />
-        <meta name="keywords" content="Premade" />
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="{{ asset('assets_admin/images/logo2.png') }}" type="image/x-icon">
+    <meta name="description" content="">
+    <title>{% block title %}PREMADE ADMIN{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('assets_admin/web/assets/mobirise-icons/mobirise-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets_admin/tether/tether.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets_admin/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets_admin/bootstrap/css/bootstrap-grid.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets_admin/bootstrap/css/bootstrap-reboot.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets_admin/socicon/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets_admin/dropdown/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets_admin/theme/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets_admin/mobirise/css/mbr-additional.css') }}" type="text/css">
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+</head>
+<body>
+    {{ include('admin_blocks/navbar.html.twig') }}
+    <div>
+        {% block body %}{% endblock %}
+    </div>
+    {{ include('admin_blocks/footer.html.twig') }}
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="shortcut icon" href="favicon.ico">
-
-        <!-- <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
-
-        <!-- Bootstrap  -->
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
-        <!-- Style -->
-        <link rel="stylesheet" href="{{ asset('css/style_admin.css') }}">
-
-        {% block stylesheets %}{% endblock %}
-
-	</head>
-	<body>
-        <div>
-            {% block body %}{% endblock %}
-        </div>
-
-        <!-- jQuery -->
-        <script src="{{ asset('js/jquery.min.js') }}"></script>
-        <!-- Bootstrap -->
-        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-
-        {% block javascripts %}{% endblock %}
-	</body>
+    <script src="{{ asset('assets_admin/web/assets/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets_admin/popper/popper.min.js') }}"></script>
+    <script src="{{ asset('assets_admin/tether/tether.min.js') }}"></script>
+    <script src="{{ asset('assets_admin/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets_admin/touchswipe/jquery.touch-swipe.min.js') }}"></script>
+    <script src="{{ asset('assets_admin/smoothscroll/smooth-scroll.js') }}"></script>
+    <script src="{{ asset('assets_admin/theme/js/script.js') }}"></script>
+    {% block javascripts %}{% endblock %}
+</body>
 </html>
-
