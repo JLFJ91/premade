@@ -21,9 +21,7 @@
 </head>
 <body>
     {{ include('admin_blocks/navbar.html.twig') }}
-    <div>
         {% block body %}{% endblock %}
-    </div>
     {{ include('admin_blocks/footer.html.twig') }}
 
     <script src="{{ asset('assets_admin/web/assets/jquery/jquery.min.js') }}"></script>
