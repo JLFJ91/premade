@@ -1,56 +1,51 @@
 {% extends 'base_admin.html.twig' %}
 {% block body %}
-    <h1>Equipos list</h1>
-
-    <table>
-        <thead>
-        <tr>
-            <th>Id</th>
-            <th>Nombre</th>
-            <th>Apellidos</th>
-            <th>Img</th>
-            <th>Email</th>
-            <th>Facebook</th>
-            <th>Instagram</th>
-            <th>Twitter</th>
-            <th>Youtube</th>
-            <th>Tipo</th>
-            <th>Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for equipo in equipos %}
-            <tr>
-                <td><a href="{{ path('equipo_show', { 'id': equipo.id }) }}">{{ equipo.id }}</a></td>
-                <td>{{ equipo.nombre }}</td>
-                <td>{{ equipo.apellidos }}</td>
-                <td>{{ equipo.img }}</td>
-                <td>{{ equipo.email }}</td>
-                <td>{{ equipo.facebook }}</td>
-                <td>{{ equipo.instagram }}</td>
-                <td>{{ equipo.twitter }}</td>
-                <td>{{ equipo.youtube }}</td>
-                <td>{{ equipo.tipo }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('equipo_show', { 'id': equipo.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('equipo_edit', { 'id': equipo.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('equipo_new') }}">Create a new equipo</a>
-        </li>
-    </ul>
+    <section class="features16 cid-qN729l9unr" id="features16-f">
+        <div class="container align-center">
+            <div class="row justify-content-between">
+                <div class="col-auto">
+                    <h2 class="mbr-section-title mbr-fonts-style pb-3 display-2">
+                        Equipo
+                    </h2>
+                </div>
+                <div class="col-auto"><a href="{{ path('paginas_new') }}" class="btn btn-outline-primary btn-sm"><span class="mbri-plus mbr-iconfont mbr-iconfont-btn"></span> Añadir</a></div>
+            </div>
+        
+            <div class="row media-row">
+                {% for equipo in equipos %}
+                    <div class="team-item col-lg-3 col-md-6">
+                        <div class="item-image">
+                            <img src="{{ asset('assets/images/') }}{{ equipo.img }}">
+                        </div>
+                        <div class="item-caption py-3">
+                            <div class="item-name px-2">
+                                <p class="mbr-fonts-style display-5">
+                                   {{ equipo.nombre }} {{ equipo.apellidos }}
+                                </p>
+                            </div>
+                            <div class="item-role px-2">
+                                <p>{{ equipo.tipo }}</p>
+                            </div>
+                            <div class="item-social pt-2">
+                                <a href="https://twitter.com/{{ equipo.twitter }}" target="_blank">
+                                    <span class="p-1 socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                                <a href="https://www.facebook.com/{{ equipo.facebook }}" target="_blank">
+                                    <span class="p-1 socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                                <a href="https://www.instagram.com/{{ equipo.instagram }}/" target="_blank">
+                                    <span class="p-1 socicon-instagram socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                                <a href="https://www.youtube.com/channel/{{ equipo.youtube }}" target="_blank">    
+                                    <span class="p-1 socicon-youtube socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div> 
+                {% endfor %}   
+            </div>
+        </div>
+    </section>
 {% endblock %}
 
 {% block javascripts %}
