@@ -13,7 +13,7 @@ class ProyectoType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nombre')->add('img')->add('iframe')->add('createdAt')->add('equipos');
+        $builder->add('nombre')->add('img')->add('iframe')->add('equipos');
     }/**
      * {@inheritdoc}
      */

@@ -2,6 +2,8 @@
 
 namespace AppBundle\Form;
 
+use AppBundle\Entity\Proyecto;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -13,7 +15,17 @@ class EquipoType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nombre')->add('apellidos')->add('img')->add('email')->add('facebook')->add('instagram')->add('twitter')->add('youtube')->add('tipo')->add('proyectos')->add('tags');
+        $builder->add('nombre')
+            ->add('apellidos')
+            ->add('img')
+            ->add('email')
+            ->add('facebook')
+            ->add('instagram')
+            ->add('twitter')
+            ->add('youtube')
+            ->add('tipo')
+            ->add('proyectos')
+            ->add('tags');
     }/**
      * {@inheritdoc}
      */

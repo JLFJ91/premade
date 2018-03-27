@@ -1,45 +1,31 @@
-{% extends 'base.html.twig' %}
+{% extends 'base_admin.html.twig' %}
 
 {% block body %}
-    <h1>Proyectos list</h1>
+    {% include '::admin_blocks/header.html.twig' with { 'h2Title': 'Proyectos', 'addPath': path('proyectos_new')  } %}
+    <section class="features17 cid-qNub0944hF" id="features17-n">
+        <div class="container">
+            <div class="row media-row">
+                {% for proyecto in proyectos %}
+                    <div class="card p-3 col-md-3">
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <a href="{{ path('slider_edit', {'id': proyecto.id}) }}">
+                                    <img src="{{ asset('assets_admin/images/') }}{{ proyecto.img }}" alt="{{ proyecto.nombre }}">
+                                </a>
+                            </div>
+                            <div class="card-box">
+                                <h4 class="card-title pb-3 mbr-fonts-style display-7">
+                                    {{ proyecto.nombre }}
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nombre</th>
-                <th>Img</th>
-                <th>Iframe</th>
-                <th>Createdat</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for proyecto in proyectos %}
-            <tr>
-                <td><a href="{{ path('proyectos_show', { 'id': proyecto.id }) }}">{{ proyecto.id }}</a></td>
-                <td>{{ proyecto.nombre }}</td>
-                <td>{{ proyecto.img }}</td>
-                <td>{{ proyecto.iframe }}</td>
-                <td>{% if proyecto.createdAt %}{{ proyecto.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('proyectos_show', { 'id': proyecto.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('proyectos_edit', { 'id': proyecto.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('proyectos_new') }}">Create a new proyecto</a>
-        </li>
-    </ul>
+{% block javascripts %}
+    <script src="{{ asset('assets_admin/dropdown/js/script.min.js') }}"></script>
 {% endblock %}

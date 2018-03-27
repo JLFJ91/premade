@@ -216,4 +216,11 @@ class Proyecto
             $this->setCreatedAt(new \DateTime('now'));
         }
     }
+
+    public function __toString()
+    {
+       return $this->nombre;
+    }
+
+
 }

@@ -29,7 +29,7 @@ class Tag
     private $tag;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Equipo", mappedBy="proyectos")
+     * @ORM\ManyToMany(targetEntity="Equipo", mappedBy="tags")
      */
     private $equipos;
 
@@ -109,4 +109,11 @@ class Tag
     {
         return $this->equipos;
     }
+
+    public function __toString()
+    {
+        return $this->tag;
+    }
+
+
 }

@@ -21,11 +21,11 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
 </head>
 <body>
-{{ include('user_blocks/navbar.html.twig') }}
+{% include 'user_blocks/navbar.html.twig' %}
 <div>
     {% block body %}{% endblock %}
 </div>
-{{ include('user_blocks/footer.html.twig') }}
+{% include 'user_blocks/footer.html.twig' %}
 
 <script src="{{ asset('assets/web/assets/jquery/jquery.min.js') }}"></script>
 <script src="{{ asset('assets/popper/popper.min.js') }}"></script>

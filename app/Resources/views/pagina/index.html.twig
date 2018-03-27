@@ -9,17 +9,9 @@
 {% endblock %}
 
 {% block body %}
+    {% include '::admin_blocks/header.html.twig' with { 'h2Title': 'Paginas', 'addPath': path('paginas_new')  } %}
     <section class="section-table cid-qN6ZXrad2L" id="table1-1">
         <div class="container container-table">
-
-            <div class="row justify-content-between">
-                <div class="col-auto">
-                    <h2 class="mbr-section-title mbr-fonts-style pb-3 display-2">
-                        Páginas
-                    </h2>
-                </div>
-                <div class="col-auto"><a href="{{ path('paginas_new') }}" class="btn btn-outline-primary btn-sm"><span class="mbri-plus mbr-iconfont mbr-iconfont-btn"></span> Añadir</a></div>
-            </div>
             <div class="table-wrapper">
                 <div class="container">
 

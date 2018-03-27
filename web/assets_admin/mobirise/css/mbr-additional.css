@@ -615,12 +615,6 @@ a:hover {
     display: none;
   }
 }
-.form-control-label {
-  position: relative;
-  cursor: pointer;
-  margin-bottom: .357em;
-  padding: 0;
-}
 .alert {
   color: #ffffff;
   border-radius: 0;
@@ -643,25 +637,12 @@ a:hover {
   transform: rotate(45deg);
   width: 14px;
 }
-.form-control {
-  background-color: #f5f5f5;
-  box-shadow: none;
-  color: #565656;
-  font-family: 'Rubik', sans-serif;
-  font-size: 1rem;
-  line-height: 1.43;
-  min-height: 3.5em;
-  padding: 1.07em .5em;
-}
+
 .form-control > .mbr-iconfont {
   font-size: 1.6rem;
 }
-.form-control,
-.form-control:focus {
-  border: 1px solid #e8e8e8;
-}
-.form-active .form-control:invalid {
-  border-color: red;
+legend.col-form-label {
+  font-size:1rem;
 }
 .mbr-overlay {
   background-color: #000;
@@ -1830,9 +1811,6 @@ body {
     width: 100% !important;
     margin-left: 0 !important;
   }
-}
-.cid-qN7vh7MPbN {
-  background-image: url("../../../assets/images/jumbotron.jpg");
 }
 .cid-qN70of2Thw {
   padding-top: 30px;
@@ -3295,67 +3273,43 @@ body {
 .cid-qN730RoGmm .mbr-section-subtitle {
   color: #767676;
 }
-.cid-qN72JkOqqi {
-  padding-top: 30px;
+.cid-qNub0944hF {
   padding-bottom: 90px;
   background-color: #ffffff;
 }
-.cid-qN72JkOqqi .mbr-slider .carousel-control {
-  background: #1b1b1b;
+.cid-qNub0944hF .card-img {
+  background-color: #fff;
 }
-.cid-qN72JkOqqi .mbr-slider .carousel-control-prev {
-  left: 0;
-  margin-left: 2.5rem;
+.cid-qNub0944hF .card-box {
+  background-color: #efefef;
+  padding: 2rem;
 }
-.cid-qN72JkOqqi .mbr-slider .carousel-control-next {
-  right: 0;
-  margin-right: 2.5rem;
+.cid-qNub0944hF h4 {
+  font-weight: 500;
+  margin-bottom: 0;
+  text-align: left;
 }
-.cid-qN72JkOqqi .mbr-slider .modal-body .close {
-  background: #1b1b1b;
+.cid-qNub0944hF p {
+  text-align: left;
 }
-.cid-qN72JkOqqi .mbr-gallery-item > div::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
+.cid-qNub0944hF .mbr-text {
+  color: #767676;
+}
+.cid-qNub0944hF .card-wrapper {
   height: 100%;
-  background: #554346;
-  background: linear-gradient(to left, #554346, #45505b) !important;
-  opacity: 0;
-  -webkit-transition: 0.2s opacity ease-in-out;
-  transition: 0.2s opacity ease-in-out;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  transition: box-shadow 0.3s;
 }
-.cid-qN72JkOqqi .mbr-gallery-item > div:hover .mbr-gallery-title::before {
-  background: transparent !important;
+.cid-qNub0944hF .card-wrapper:hover {
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s;
 }
-.cid-qN72JkOqqi .mbr-gallery-item > div:hover:before {
-  opacity: 0.7 !important;
-}
-.cid-qN72JkOqqi .mbr-gallery-title {
-  font-size: .9em;
-  position: absolute;
-  display: block;
-  width: 100%;
-  bottom: 0;
-  padding: 1rem;
-  color: #fff;
-  z-index: 2;
-}
-.cid-qN72JkOqqi .mbr-gallery-title:before {
-  content: " ";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  position: absolute;
-  background: #554346 !important;
-  background: linear-gradient(to left, #554346, #45505b) !important;
-  opacity: 0.7;
-  -webkit-transition: 0.2s background ease-in-out;
-  transition: 0.2s background ease-in-out;
+@media (min-width: 992px) {
+  .cid-qNub0944hF .my-col {
+    flex: 0 0 20%;
+    max-width: 20%;
+    padding: 15px;
+  }
 }
 .cid-qN7129QQY3 {
   padding-top: 30px;
