@@ -3,6 +3,8 @@
 namespace AppBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\ColorType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,7 +15,34 @@ class SliderType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('titulo')->add('contenido')->add('tipo')->add('url')->add('overlay')->add('textColor')->add('textAlign');
+        $builder->add('titulo')
+            ->add('contenido')
+            ->add('tipo', ChoiceType::class, [
+                'choices' => [
+                    'Selecciona uno...' => '',
+                    'Imagen' => 'image',
+                    'Video' => 'video'
+                ]
+            ])
+            ->add('url')
+            ->add('overlay', ChoiceType::class, [
+                'choices' => [
+                    'Si' => true,
+                    'No' => false
+                ]
+            ])
+            ->add('textColor', ColorType::class, [
+                'label' => 'Color del texto',
+                'data' => ''
+            ])
+            ->add('textAlign', ChoiceType::class, [
+                'label' => 'Alineación del texto',
+                'choices' => [
+                    'Derecha' => 'right',
+                    'Izquierda' => 'left',
+                    'Centro' => 'center'
+                ]
+            ]);
     }/**
      * {@inheritdoc}
      */

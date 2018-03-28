@@ -637,9 +637,14 @@ a:hover {
   transform: rotate(45deg);
   width: 14px;
 }
-
 .form-control > .mbr-iconfont {
   font-size: 1.6rem;
+}
+.form-control-label {
+  font-weight: bold;
+}
+.form-control[type="color"] {
+  height: calc(2.25rem + 2px);;
 }
 legend.col-form-label {
   font-size:1rem;
@@ -1734,9 +1739,8 @@ body {
   color: #c1c1c1 !important;
 }
 .cid-qN6ZXrad2L {
-  padding-top: 120px;
   padding-bottom: 90px;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 }
 .cid-qN6ZXrad2L .mbr-section-subtitle {
   color: #767676;
@@ -2770,9 +2774,8 @@ body {
   color: #c1c1c1 !important;
 }
 .cid-qN729l9unr {
-  padding-top: 120px;
   padding-bottom: 90px;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 }
 .cid-qN729l9unr .mbr-section-subtitle {
   color: #767676;

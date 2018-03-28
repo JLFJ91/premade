@@ -2,6 +2,8 @@
 
 namespace AppBundle\Form;
 
+use Doctrine\ORM\EntityRepository;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -13,7 +15,16 @@ class TagType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('tag')->add('equipos');
+        $builder->add('tag')
+            ->add('equipos', EntityType::class, [
+                'class' => 'AppBundle:Equipo',
+                'query_builder' => function(EntityRepository $er) {
+                    return $er->createQueryBuilder('e')
+                        ->orderBy('e.nombre', 'ASC');
+                },
+                'label' => 'Equipo',
+                'multiple' => true
+            ]);
     }/**
      * {@inheritdoc}
      */

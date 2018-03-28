@@ -1,14 +1,1 @@
-{% extends 'base_admin.html.twig' %}
-{% block body %}
-
-    {% include '::admin_blocks/header.html.twig' with { 'h2Title': 'Nueva Página', 'addPath': path('paginas_new')  } %}
-
-    <div class="container pl-4 pt-4 pb-5">
-        {{ form_start(form) }}
-            {{ form_widget(form) }}
-            <div class="text-center">
-                <input type="submit" class="btn btn-primary" value="Enviar" />
-            </div>
-        {{ form_end(form) }}
-    </div>
-{% endblock %}
+{% include '::pagina/pagina_form.html.twig' with {'h2Title': 'Nueva Página'} %}
