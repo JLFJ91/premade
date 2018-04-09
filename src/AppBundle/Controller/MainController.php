@@ -5,17 +5,19 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use AppBundle\Entity\Pagina;
 
-class DefaultController extends Controller
+class MainController extends Controller
 {
     /**
      * @Route("/", name="homepage")
      */
     public function indexAction(Request $request)
     {
-        // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+        $em = $this->getDoctrine()->getManager();
+        $queHacemos = $em->getRepository('AppBundle:Pagina')->find(Pagina::$PAGINA_QUE_HACEMOS);
+        return $this->render('main/index.html.twig', [
+            'queHacemos' => $queHacemos,
         ]);
     }
 }

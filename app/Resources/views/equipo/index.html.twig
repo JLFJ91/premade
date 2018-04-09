@@ -1,59 +1,46 @@
-{% extends 'base_admin.html.twig' %}
+{% extends 'base.html.twig' %}
 {% block body %}
+    <section class="testimonials1 cid-qN1BirgGxV mbr-parallax-background" id="testimonials1-w">
 
-    {% include '::admin_blocks/header.html.twig' with { 'h2Title': 'Equipo', 'addPath': path('equipo_new')  } %}
 
-    <section class="features16 cid-qN729l9unr" id="features16-f">
+
+        <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(35, 35, 35);">
+        </div>
         <div class="container">
-            <div class="row media-row">
-                {% for equipo in equipos %}
-                    <div class="team-item col-lg-3 col-md-6">
-                        <div class="item-image">
-                            <a href="{{ path('equipo_edit', {'id': equipo.id}) }}">
-                                <img src="{{ asset('assets/images/') }}{{ equipo.img }}" alt="{{ equipo.nombre }} {{ equipo.apellidos }}">
-                            </a>
-                        </div>
-                        <div class="item-caption py-3">
-                            <div class="item-name px-2">
-                                <p class="mbr-fonts-style display-5 text-center">
-                                    <a href="{{ path('equipo_edit', {'id': equipo.id}) }}">
-                                        {{ equipo.nombre }} {{ equipo.apellidos }}
-                                    </a>
-                                </p>
-                            </div>
-                            <div class="item-role px-2 text-center">
-                                <p>{{ equipo.tipo }}</p>
-                            </div>
-                            <div class="item-social pt-2">
-                                {% if equipo.twitter %}
-                                    <a href="https://twitter.com/{{ equipo.twitter }}" target="_blank">
-                                        <span class="p-1 socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
-                                    </a>
-                                {% endif %}
-                                {% if equipo.facebook %}
-                                    <a href="https://www.facebook.com/{{ equipo.facebook }}" target="_blank">
-                                        <span class="p-1 socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
-                                    </a>
-                                {% endif %}
-                                {% if equipo.instagram %}
-                                    <a href="https://www.instagram.com/{{ equipo.instagram }}/" target="_blank">
-                                        <span class="p-1 socicon-instagram socicon mbr-iconfont mbr-iconfont-social"></span>
-                                    </a>
-                                {% endif %}
-                                {% if equipo.youtube %}
-                                    <a href="https://www.youtube.com/channel/{{ equipo.youtube }}" target="_blank">
-                                        <span class="p-1 socicon-youtube socicon mbr-iconfont mbr-iconfont-social"></span>
-                                    </a>
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div> 
-                {% endfor %}   
+            <div class="media-container-row">
+                <div class="title col-12 align-center">
+                    <h2 class="pb-3 mbr-fonts-style display-2">
+                        FUNDADORES</h2>
+                    <h3 class="mbr-section-subtitle mbr-light pb-3 mbr-fonts-style display-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultrices quam libero.</h3>
+                </div>
             </div>
+        </div>
+
+        <div class="container pt-3 mt-2">
+            <div class="media-container-row">
+                {% for fundador in fundadores %}
+                    {% include 'equipo/fundador_block.html.twig' with {'fundador': fundador} %}
+                {% endfor %}
+            </div>
+        </div>   
+    </section>
+    <section class="features16 cid-qN1C0Yle4r" id="features16-x">
+
+
+
+        <div class="container align-center">
+            <h2 class="pb-3 mbr-fonts-style mbr-section-title display-2">
+                NUESTROS SOCIOS</h2>
+            <h3 class="pb-5 mbr-section-subtitle mbr-fonts-style mbr-light display-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultrices quam libero, at vulputate velit aliquet lacinia. Donec tincidunt orci velit, ac efficitur eros tristique non.&nbsp;</h3>
+            <div class="row media-row">
+                {% for socio in socios %}
+                    {% include 'equipo/socio_block.html.twig' with {'socio': socio} %}
+                {% endfor %}
+            </div>    
         </div>
     </section>
 {% endblock %}
 
 {% block javascripts %}
-    <script src="{{ asset('assets/dropdown/js/script.min.js') }}"></script>
+    <script src="{{ asset('assets/parallax/jarallax.min.js') }}"></script>
 {% endblock %}

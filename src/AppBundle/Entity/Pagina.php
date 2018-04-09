@@ -14,7 +14,9 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Pagina
 {
-    /**
+    public static $PAGINA_QUE_HACEMOS = 1;
+
+        /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")

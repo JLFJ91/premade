@@ -10,23 +10,41 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component
 /**
  * Equipo controller.
  *
- * @Route("admin/equipo")
  */
 class EquipoController extends Controller
 {
     /**
      * Lists all equipo entities.
      *
-     * @Route("/", name="equipo_index")
+     * @Route("equipo/", name="equipo_index")
      * @Method("GET")
      */
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
 
-        $equipos = $em->getRepository('AppBundle:Equipo')->findAll();
+        $fundadores = $em->getRepository('AppBundle:Equipo')->findBy(['tipo' => 'fundador'], ['nombre' => 'ASC'], 3);
+        $socios = $em->getRepository('AppBundle:Equipo')->findBy(['tipo' => 'socio'], ['nombre' => 'ASC']);
 
         return $this->render('equipo/index.html.twig', array(
+            'fundadores' => $fundadores,
+            'socios' => $socios,
+        ));
+    }
+    
+    /**
+     * Lists all equipo entities.
+     *
+     * @Route("admin/equipo/", name="admin_equipo_index")
+     * @Method("GET")
+     */
+    public function adminIndexAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $equipos = $em->getRepository('AppBundle:Equipo')->findAll();
+
+        return $this->render('equipo/admin_index.html.twig', array(
             'equipos' => $equipos,
         ));
     }
@@ -34,7 +52,7 @@ class EquipoController extends Controller
     /**
      * Creates a new equipo entity.
      *
-     * @Route("/new", name="equipo_new")
+     * @Route("admin/equipo/new", name="equipo_new")
      * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
@@ -60,7 +78,7 @@ class EquipoController extends Controller
     /**
      * Finds and displays a equipo entity.
      *
-     * @Route("/{id}", name="equipo_show")
+     * @Route("admin/equipo/{id}", name="equipo_show")
      * @Method("GET")
      */
     public function showAction(Equipo $equipo)
@@ -76,7 +94,7 @@ class EquipoController extends Controller
     /**
      * Displays a form to edit an existing equipo entity.
      *
-     * @Route("/{id}/edit", name="equipo_edit")
+     * @Route("admin/equipo/{id}/edit", name="equipo_edit")
      * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Equipo $equipo)
@@ -101,7 +119,7 @@ class EquipoController extends Controller
     /**
      * Deletes a equipo entity.
      *
-     * @Route("/{id}", name="equipo_delete")
+     * @Route("admin/equipo/{id}", name="equipo_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, Equipo $equipo)
@@ -115,7 +133,7 @@ class EquipoController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('equipo_index');
+        return $this->redirectToRoute('admin_equipo_index');
     }
 
     /**

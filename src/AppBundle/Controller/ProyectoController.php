@@ -9,15 +9,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component
 
 /**
  * Proyecto controller.
- *
- * @Route("proyectos")
  */
 class ProyectoController extends Controller
 {
     /**
      * Lists all proyecto entities.
      *
-     * @Route("/", name="proyectos_index")
+     * @Route("proyectos/", name="proyectos_index")
      * @Method("GET")
      */
     public function indexAction()
@@ -27,6 +25,23 @@ class ProyectoController extends Controller
         $proyectos = $em->getRepository('AppBundle:Proyecto')->findAll();
 
         return $this->render('proyecto/index.html.twig', array(
+            'proyectos' => $proyectos,
+        ));
+    }
+    
+    /**
+     * Lists all proyecto entities.
+     *
+     * @Route("admin/proyectos/", name="admin_proyectos_index")
+     * @Method("GET")
+     */
+    public function adminIndexAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $proyectos = $em->getRepository('AppBundle:Proyecto')->findAll();
+
+        return $this->render('proyecto/admin_index.html.twig', array(
             'proyectos' => $proyectos,
         ));
     }
@@ -60,7 +75,7 @@ class ProyectoController extends Controller
     /**
      * Finds and displays a proyecto entity.
      *
-     * @Route("/{id}", name="proyectos_show")
+     * @Route("admin/proyectos/{id}", name="proyectos_show")
      * @Method("GET")
      */
     public function showAction(Proyecto $proyecto)
@@ -76,7 +91,7 @@ class ProyectoController extends Controller
     /**
      * Displays a form to edit an existing proyecto entity.
      *
-     * @Route("/{id}/edit", name="proyectos_edit")
+     * @Route("admin/proyectos/{id}/edit", name="proyectos_edit")
      * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Proyecto $proyecto)
@@ -101,7 +116,7 @@ class ProyectoController extends Controller
     /**
      * Deletes a proyecto entity.
      *
-     * @Route("/{id}", name="proyectos_delete")
+     * @Route("admin/proyectos/{id}", name="proyectos_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, Proyecto $proyecto)
@@ -115,7 +130,7 @@ class ProyectoController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('proyectos_index');
+        return $this->redirectToRoute('admin_proyectos_index');
     }
 
     /**

@@ -9,15 +9,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component
 
 /**
  * Tag controller.
- *
- * @Route("admin/tags")
  */
 class TagController extends Controller
 {
     /**
      * Lists all tag entities.
      *
-     * @Route("/", name="tags_index")
+     * @Route("admin/tags/", name="admin_tags_index")
      * @Method("GET")
      */
     public function indexAction()
@@ -26,7 +24,7 @@ class TagController extends Controller
 
         $tags = $em->getRepository('AppBundle:Tag')->findAll();
 
-        return $this->render('tag/index.html.twig', array(
+        return $this->render('tag/admin_index.html.twig', array(
             'tags' => $tags,
         ));
     }
@@ -34,7 +32,7 @@ class TagController extends Controller
     /**
      * Creates a new tag entity.
      *
-     * @Route("/new", name="tags_new")
+     * @Route("admin/tags/new", name="tags_new")
      * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
@@ -60,7 +58,7 @@ class TagController extends Controller
     /**
      * Finds and displays a tag entity.
      *
-     * @Route("/{id}", name="tags_show")
+     * @Route("admin/tags/{id}", name="tags_show")
      * @Method("GET")
      */
     public function showAction(Tag $tag)
@@ -76,7 +74,7 @@ class TagController extends Controller
     /**
      * Displays a form to edit an existing tag entity.
      *
-     * @Route("/{id}/edit", name="tags_edit")
+     * @Route("admin/tags/{id}/edit", name="tags_edit")
      * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Tag $tag)
@@ -101,7 +99,7 @@ class TagController extends Controller
     /**
      * Deletes a tag entity.
      *
-     * @Route("/{id}", name="tags_delete")
+     * @Route("admin/tags/{id}", name="tags_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, Tag $tag)
@@ -115,7 +113,7 @@ class TagController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('tags_index');
+        return $this->redirectToRoute('admin_tags_index');
     }
 
     /**

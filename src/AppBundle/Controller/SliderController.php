@@ -9,15 +9,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component
 
 /**
  * Slider controller.
- *
- * @Route("slider")
  */
 class SliderController extends Controller
 {
     /**
      * Lists all slider entities.
      *
-     * @Route("/", name="slider_index")
+     * @Route("admin/slider/", name="admin_slider_index")
      * @Method("GET")
      */
     public function indexAction()
@@ -26,7 +24,7 @@ class SliderController extends Controller
 
         $sliders = $em->getRepository('AppBundle:Slider')->findAll();
 
-        return $this->render('slider/index.html.twig', array(
+        return $this->render('slider/admin_index.html.twig', array(
             'sliders' => $sliders,
         ));
     }
@@ -34,7 +32,7 @@ class SliderController extends Controller
     /**
      * Creates a new slider entity.
      *
-     * @Route("/new", name="slider_new")
+     * @Route("admin/slider/new", name="slider_new")
      * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
@@ -60,7 +58,7 @@ class SliderController extends Controller
     /**
      * Finds and displays a slider entity.
      *
-     * @Route("/{id}", name="slider_show")
+     * @Route("admin/slider/{id}", name="slider_show")
      * @Method("GET")
      */
     public function showAction(Slider $slider)
@@ -76,7 +74,7 @@ class SliderController extends Controller
     /**
      * Displays a form to edit an existing slider entity.
      *
-     * @Route("/{id}/edit", name="slider_edit")
+     * @Route("admin/slider/{id}/edit", name="slider_edit")
      * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Slider $slider)
@@ -101,7 +99,7 @@ class SliderController extends Controller
     /**
      * Deletes a slider entity.
      *
-     * @Route("/{id}", name="slider_delete")
+     * @Route("admin/slider/{id}", name="slider_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, Slider $slider)
@@ -115,7 +113,7 @@ class SliderController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('slider_index');
+        return $this->redirectToRoute('admin_slider_index');
     }
 
     /**

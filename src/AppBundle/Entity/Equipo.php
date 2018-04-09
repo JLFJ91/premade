@@ -34,6 +34,13 @@ class Equipo
      * @ORM\Column(name="apellidos", type="string", length=50)
      */
     private $apellidos;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=200)
+     */
+    private $descripcion;
 
     /**
      * @var string
@@ -162,6 +169,30 @@ class Equipo
     public function getApellidos()
     {
         return $this->apellidos;
+    }
+    
+    /**
+     * Set descripcion
+     *
+     * @param string $descripcion
+     *
+     * @return Equipo
+     */
+    public function setDescripcion($descripcion)
+    {
+        $this->descripcion = $descripcion;
+
+        return $this;
+    }
+
+    /**
+     * Get descripcion
+     *
+     * @return string
+     */
+    public function getDescripcion()
+    {
+        return $this->descripcion;
     }
 
     /**

@@ -9,15 +9,30 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component
 
 /**
  * Pagina controller.
- *
- * @Route("admin/paginas")
  */
 class PaginaController extends Controller
 {
     /**
+     * Página de contacto.
+     *
+     * @Route("contacto", name="paginas_contacto")
+     * @Method("GET")
+     */
+    public function contactoAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $paginas = $em->getRepository('AppBundle:Pagina')->findAll();
+
+        return $this->render('pagina/contacto.html.twig', array(
+            'paginas' => $paginas,
+        ));
+    }
+    
+    /**
      * Lists all pagina entities.
      *
-     * @Route("/", name="paginas_index")
+     * @Route("admin/paginas/", name="admin_paginas_index")
      * @Method("GET")
      */
     public function indexAction()
@@ -26,7 +41,7 @@ class PaginaController extends Controller
 
         $paginas = $em->getRepository('AppBundle:Pagina')->findAll();
 
-        return $this->render('pagina/index.html.twig', array(
+        return $this->render('pagina/admin_index.html.twig', array(
             'paginas' => $paginas,
         ));
     }
@@ -34,7 +49,7 @@ class PaginaController extends Controller
     /**
      * Creates a new pagina entity.
      *
-     * @Route("/new", name="paginas_new")
+     * @Route("admin/paginas/new", name="paginas_new")
      * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
@@ -60,7 +75,7 @@ class PaginaController extends Controller
     /**
      * Finds and displays a pagina entity.
      *
-     * @Route("/{id}", name="paginas_show")
+     * @Route("admin/paginas/{id}", name="paginas_show")
      * @Method("GET")
      */
     public function showAction(Pagina $pagina)
@@ -76,7 +91,7 @@ class PaginaController extends Controller
     /**
      * Displays a form to edit an existing pagina entity.
      *
-     * @Route("/{id}/edit", name="paginas_edit")
+     * @Route("admin/paginas/{id}/edit", name="paginas_edit")
      * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Pagina $pagina)
@@ -101,7 +116,7 @@ class PaginaController extends Controller
     /**
      * Deletes a pagina entity.
      *
-     * @Route("/{id}", name="paginas_delete")
+     * @Route("admin/paginas/{id}", name="paginas_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, Pagina $pagina)
@@ -115,7 +130,7 @@ class PaginaController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('paginas_index');
+        return $this->redirectToRoute('admin_paginas_index');
     }
 
     /**

@@ -18,6 +18,7 @@ AppBundle\Entity\Equipo:
     equipo_{0..30}:
         nombre: <firstName()>
         apellidos: <lastName()>
+        descripcion: <sentence()>
         img: 'no-image-user.jpg'
         email: <email()>
         facebook: <userName()>
