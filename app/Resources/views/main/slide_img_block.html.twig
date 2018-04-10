@@ -1,0 +1,16 @@
+<div class="carousel-item slider-fullscreen-image {% if id == 0 %} active {% endif %}" data-bg-video-slide="false" style="background-image: url({{ asset('assets/images/1.jpg') }});">
+    <div class="container container-slide">
+        <div class="image_wrapper">
+            <div class="mbr-overlay"></div>
+            <img src="{{ asset('assets/images/1.jpg') }}">
+            <div class="carousel-caption justify-content-center">
+                <div class="col-10 align-center">
+                    <h2 class="mbr-fonts-style display-1">{{ slide.titulo }}</h2>
+                    <p class="lead mbr-text mbr-fonts-style display-5">
+                        {{ slide.contenido }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

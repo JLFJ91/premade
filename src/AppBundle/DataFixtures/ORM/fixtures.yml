@@ -30,4 +30,4 @@ AppBundle\Entity\Proyecto:
     proyecto_{0..10}:
         nombre: <sentence()>
         img: 'no-image-proyecto.jpg'
-        iframe: '<iframe></iframe>'
+        url: '<iframe></iframe>'

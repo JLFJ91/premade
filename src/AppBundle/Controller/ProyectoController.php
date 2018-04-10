@@ -22,9 +22,11 @@ class ProyectoController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $proyectos = $em->getRepository('AppBundle:Proyecto')->findAll();
+        $ultimoProyecto = $em->getRepository('AppBundle:Proyecto')->findBy([], ['createdAt' => 'DESC'], 1);
+        $proyectos = $em->getRepository('AppBundle:Proyecto')->findBy([], ['createdAt' => 'DESC']);
 
         return $this->render('proyecto/index.html.twig', array(
+            'ultimoProyecto' => $ultimoProyecto,
             'proyectos' => $proyectos,
         ));
     }

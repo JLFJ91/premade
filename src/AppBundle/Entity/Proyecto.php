@@ -40,9 +40,9 @@ class Proyecto
     /**
      * @var string
      *
-     * @ORM\Column(name="iframe", type="text", nullable=true)
+     * @ORM\Column(name="url", type="text", nullable=true)
      */
-    private $iframe;
+    private $url;
 
     /**
      * @var \DateTime
@@ -124,27 +124,27 @@ class Proyecto
     }
 
     /**
-     * Set iframe
+     * Set url
      *
-     * @param string $iframe
+     * @param string $url
      *
      * @return Proyecto
      */
-    public function setIframe($iframe)
+    public function setUrl($url)
     {
-        $this->iframe = $iframe;
+        $this->url = $url;
 
         return $this;
     }
 
     /**
-     * Get iframe
+     * Get url
      *
      * @return string
      */
-    public function getIframe()
+    public function getUrl()
     {
-        return $this->iframe;
+        return $this->url;
     }
 
     /**
