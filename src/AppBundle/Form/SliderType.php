@@ -4,7 +4,7 @@ namespace AppBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\ColorType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -24,16 +24,17 @@ class SliderType extends AbstractType
                     'Video' => 'video'
                 ]
             ])
-            ->add('url')
+            ->add('url', TextType::class, [
+                'label' => 'Id Video / Imagen'
+            ])
             ->add('overlay', ChoiceType::class, [
                 'choices' => [
                     'Si' => true,
                     'No' => false
                 ]
             ])
-            ->add('textColor', ColorType::class, [
-                'label' => 'Color del texto',
-                'data' => ''
+            ->add('textColor', TextType::class, [
+                'label' => 'Color del texto'
             ])
             ->add('textAlign', ChoiceType::class, [
                 'label' => 'Alineación del texto',

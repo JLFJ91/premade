@@ -22,9 +22,7 @@
 </head>
 <body>
     {% include 'user_blocks/navbar.html.twig' %}
-    <div>
-        {% block body %}{% endblock %}
-    </div>
+    {% block body %}{% endblock %}
     {% include 'user_blocks/footer.html.twig' %}
 
     <script src="{{ asset('assets/web/assets/jquery/jquery.min.js') }}"></script>

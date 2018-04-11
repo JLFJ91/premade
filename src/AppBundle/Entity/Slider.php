@@ -54,21 +54,21 @@ class Slider
      *
      * @ORM\Column(name="overlay", type="boolean")
      */
-    private $overlay;
+    private $overlay = true;
 
     /**
      * @var string
      *
      * @ORM\Column(name="text_color", type="string", length=7)
      */
-    private $textColor;
+    private $textColor = '#FFFFFF';
 
     /**
      * @var string
      *
      * @ORM\Column(name="text_align", type="string", length=10)
      */
-    private $textAlign;
+    private $textAlign = 'left';
 
 
     /**
