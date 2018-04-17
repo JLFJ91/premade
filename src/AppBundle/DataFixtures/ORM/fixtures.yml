@@ -19,7 +19,7 @@ AppBundle\Entity\Equipo:
         nombre: <firstName()>
         apellidos: <lastName()>
         descripcion: <sentence()>
-        img: 'no-image-user.jpg'
+        img: 'no-image.jpg'
         email: <email()>
         facebook: <userName()>
         instagram: <userName()>
@@ -29,5 +29,5 @@ AppBundle\Entity\Equipo:
 AppBundle\Entity\Proyecto:
     proyecto_{0..10}:
         nombre: <sentence()>
-        img: 'no-image-proyecto.jpg'
+        img: 'no-image.jpg'
         url: '<iframe></iframe>'

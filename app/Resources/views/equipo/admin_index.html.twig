@@ -10,7 +10,7 @@
                     <div class="team-item col-lg-3 col-md-6">
                         <div class="item-image">
                             <a href="{{ path('equipo_edit', {'id': equipo.id}) }}">
-                                <img src="{{ asset('assets/images/') }}{{ equipo.img }}" alt="{{ equipo.nombre }} {{ equipo.apellidos }}">
+                                <img src="{{ asset(equipo_img_route ~ equipo.img) }}" alt="{{ equipo.nombre }} {{ equipo.apellidos }}">
                             </a>
                         </div>
                         <div class="item-caption py-3">

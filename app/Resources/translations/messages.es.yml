@@ -1,0 +1,24 @@
+button.add.folder: Nueva Carpeta
+button.add.files: Nuevo Archivo
+button.delete.current: Eliminar
+button.delete.selected: Eliminar Seleccionado
+button.delete.action: Eliminar
+button.cancel: Cancelar
+button.refresh: Refrescar
+button.parent: Subir
+button.tree: Mostrar Árbol de archivos
+button.rename: Renombrar
+title.add.folder: Nueva Carpeta
+title.rename.file: Renombrar Archivo
+title.delete: Eliminar
+title.download: Descargar
+select-all: Seleccionar Todo
+table.name: Nombre
+table.date: Fecha
+table.size: Tamaño
+table.dimension: Dimensión
+table.actions: Acciones
+confirm.delete: Confirmar Borrado
+file.add.success: Archivo Añadido Correctamente
+file.deleted.success: Archivo Borrado Correctamente
+input.default: Nueva Carpeta

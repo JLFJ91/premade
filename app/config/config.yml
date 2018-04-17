@@ -38,6 +38,11 @@ twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
     form_themes: ['bootstrap_4_layout.html.twig']
+    globals:
+        equipo_img_route: uploads/equipo/
+        proyecto_img_route: uploads/proyecto/
+        slider_img_route: uploads/slider/
+        other_img_route: uploads/premade/
 
 # Doctrine Configuration
 doctrine:
@@ -78,3 +83,8 @@ fos_user:
     from_email:
         address: "%mailer_user%"
         sender_name: "%mailer_user%"
+
+artgris_file_manager:
+    conf:
+        default:
+            dir: "../web/uploads"
