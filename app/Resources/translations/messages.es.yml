@@ -1,24 +1,53 @@
-button.add.folder: Nueva Carpeta
-button.add.files: Nuevo Archivo
-button.delete.current: Eliminar
-button.delete.selected: Eliminar Seleccionado
-button.delete.action: Eliminar
-button.cancel: Cancelar
-button.refresh: Refrescar
-button.parent: Subir
-button.tree: Mostrar Árbol de archivos
-button.rename: Renombrar
-title.add.folder: Nueva Carpeta
-title.rename.file: Renombrar Archivo
-title.delete: Eliminar
-title.download: Descargar
-select-all: Seleccionar Todo
-table.name: Nombre
-table.date: Fecha
-table.size: Tamaño
-table.dimension: Dimensión
-table.actions: Acciones
-confirm.delete: Confirmar Borrado
-file.add.success: Archivo Añadido Correctamente
-file.deleted.success: Archivo Borrado Correctamente
-input.default: Nueva Carpeta
+file:
+  add:
+    success: Archivo subido correctamente
+  renamed:
+    success: Archivo renombrado correctamente
+    danger: El archivo ya existe o no estás autorizado para acceder a esta página
+    unauthorized: El archivo no existe o no estás autorizado para acceder a esta página
+    nochanged: Cambios no detectados
+  deleted:
+    success: Archivos borrados correctamente
+    danger: El archivo no existe o no estás autorizado para acceder a esta página
+    unauthorized: El archivo no existe o no estás autorizado para acceder a esta página
+folder:
+  add:
+    danger: Ocurrió un error al crear el directorio en %message%
+    success: Carpeta creada correctamente
+  deleted:
+    success: Carpeta borrada correctamente
+    unauthorized: La carpeta no existe o no estás autorizado para acceder a esta página
+button:
+  cancel: CANCELAR
+  refresh: Refrescar
+  parent: Subir
+  rename: RENOMBRAR
+  add:
+    files: Añadir archivos...
+    folder: Nueva carpeta...
+  delete:
+    current: Borrar carpeta actual
+    selected: Borrar archivos seleccionados
+    action: BORRAR
+  tree: Mostrar Árbol de archivos
+title:
+  add:
+    folder: Nueva Carpeta
+  rename:
+    file: Renombrar
+  delete: Borrar
+  download: Descargar
+input:
+    default: Carpeta sin nombre
+table:
+  name: Nombre
+  date: Fecha
+  size: Tamaño
+  dimension: Dimensión
+  actions: Acciones
+confirm:
+  delete:  ¿Estás seguro que quieres borrar?
+size:
+  mb: MB
+  kb: kB
+select-all: Seleccionar todo

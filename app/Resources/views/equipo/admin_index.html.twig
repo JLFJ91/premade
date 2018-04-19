@@ -1,4 +1,7 @@
 {% extends 'base_admin.html.twig' %}
+
+{% block title %}EQUIPO - {{ parent() }}{% endblock %}
+
 {% block body %}
 
     {% include '::admin_blocks/header.html.twig' with { 'h2Title': 'Equipo', 'addPath': path('equipo_new')  } %}

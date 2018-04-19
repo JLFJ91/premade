@@ -34,21 +34,7 @@ services:
     #     arguments:
     #         $someArgument: 'some_value'
 
-    file_type_extension:
-        class: Artgris\Bundle\FileManagerBundle\Twig\FileTypeExtension
-        tags:
-            - { name: twig.extension }
-        arguments: ['@file_type_service']
-        public: true
-
     file_type_service:
-        class: Artgris\Bundle\FileManagerBundle\Service\FileTypeService
-        arguments: ['@router']
-        public: true
-
-    order_extension:
-        class: Artgris\Bundle\FileManagerBundle\Twig\OrderExtension
-        tags:
-            - { name: twig.extension }
+        class: AppBundle\Service\FileTypeService
         arguments: ['@router']
         public: true

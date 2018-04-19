@@ -1,5 +1,7 @@
 {% extends 'base_admin.html.twig' %}
 
+{% block title %}PROYECTOS - {{ parent() }}{% endblock %}
+
 {% block body %}
     {% include '::admin_blocks/header.html.twig' with { 'h2Title': 'Proyectos', 'addPath': path('proyectos_new')  } %}
     <section class="features17 cid-qNub0944hF" id="features17-n">

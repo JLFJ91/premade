@@ -19,17 +19,44 @@ class PaginaController extends Controller
      * @Route("contacto", name="paginas_contacto")
      * @Method("GET")
      */
-    public function contactoAction()
+    public function contactoAction(Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
+        $form = $this->createForm('AppBundle\Form\ContactoType');
 
-        $paginas = $em->getRepository('AppBundle:Pagina')->findAll();
+        if ($request->isMethod('POST')) {
+            $form->handleRequest($request);
 
-        return $this->render('pagina/contacto.html.twig', array(
-            'paginas' => $paginas,
-        ));
+            if ($form->isValid()) {
+                $mailer = $this->get('mailer');
+                $message = $mailer->createMessage()
+                    ->setSubject($form->get('CONTACTO PREMADE')->getData())
+                    ->setFrom('contacto@premade.com')
+                    ->setTo('contacto@premade.com')
+                    ->setBody(
+                        $this->renderView(
+                            'AppBundle:Mail:contact.html.twig',
+                            array(
+                                'ip' => $request->getClientIp(),
+                                'nombre' => $form->get('nombre')->getData(),
+                                'email' => $form->get('email')->getData(),
+                                'mensaje' => $form->get('mensaje')->getData()
+                            )
+                        )
+                    );
+
+                $mailer->send($message);
+
+                $request->getSession()->getFlashBag()->add('success', 'Tu email ha sido enviado. Gracias');
+
+                return $this->redirect($this->generateUrl('paginas_contacto'));
+            }
+        }
+
+        return $this->render('pagina/contacto.html.twig', [
+            'form' => $form->createView()
+        ]);
     }
-    
+
     /**
      * Lists all pagina entities.
      *
@@ -146,7 +173,6 @@ class PaginaController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('paginas_delete', array('id' => $pagina->getId())))
             ->setMethod('DELETE')
-            ->getForm()
-        ;
+            ->getForm();
     }
 }

@@ -1,8 +1,6 @@
 {% extends 'base_admin.html.twig' %}
 
-{% block title %}
-    PÁGINAS - {{ parent() }}
-{% endblock %}
+{% block title %}PÁGINAS - {{ parent() }}{% endblock %}
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('assets/datatables/data-tables.bootstrap4.min.css') }}">
@@ -36,7 +34,7 @@
                             <tr>
                                 <td class="body-item mbr-fonts-style display-7">{{ pagina.titulo }}</td>
                                 <td class="body-item mbr-fonts-style display-7">{% if pagina.createdAt %}{{ pagina.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
-                                <td class="body-item mbr-fonts-style display-7"><a href="{{ path('paginas_edit', { 'id': pagina.id }) }}">Editar</a></td>
+                                <td class="body-item mbr-fonts-style display-7"><a href="{{ path('paginas_edit', { 'id': pagina.id }) }}" title="Editar"><span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn"></span></a></td>
                             </tr>
                         {% endfor %}
                         </tbody>
