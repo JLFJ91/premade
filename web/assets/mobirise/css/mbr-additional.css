@@ -615,6 +615,9 @@ a:hover {
     display: none;
   }
 }
+.form-group textarea {
+  min-height: 8rem;
+}
 .form-control-label {
   position: relative;
   cursor: pointer;
@@ -651,7 +654,6 @@ a:hover {
   font-size: 1rem;
   line-height: 1.43;
   min-height: 3.5em;
-  padding: 1.07em .5em;
 }
 .form-control > .mbr-iconfont {
   font-size: 1.6rem;

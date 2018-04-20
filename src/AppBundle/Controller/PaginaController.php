@@ -14,50 +14,6 @@ use Symfony\Component\HttpFoundation\Request;
 class PaginaController extends Controller
 {
     /**
-     * Página de contacto.
-     *
-     * @Route("contacto", name="paginas_contacto")
-     * @Method("GET")
-     */
-    public function contactoAction(Request $request)
-    {
-        $form = $this->createForm('AppBundle\Form\ContactoType');
-
-        if ($request->isMethod('POST')) {
-            $form->handleRequest($request);
-
-            if ($form->isValid()) {
-                $mailer = $this->get('mailer');
-                $message = $mailer->createMessage()
-                    ->setSubject($form->get('CONTACTO PREMADE')->getData())
-                    ->setFrom('contacto@premade.com')
-                    ->setTo('contacto@premade.com')
-                    ->setBody(
-                        $this->renderView(
-                            'AppBundle:Mail:contact.html.twig',
-                            array(
-                                'ip' => $request->getClientIp(),
-                                'nombre' => $form->get('nombre')->getData(),
-                                'email' => $form->get('email')->getData(),
-                                'mensaje' => $form->get('mensaje')->getData()
-                            )
-                        )
-                    );
-
-                $mailer->send($message);
-
-                $request->getSession()->getFlashBag()->add('success', 'Tu email ha sido enviado. Gracias');
-
-                return $this->redirect($this->generateUrl('paginas_contacto'));
-            }
-        }
-
-        return $this->render('pagina/contacto.html.twig', [
-            'form' => $form->createView()
-        ]);
-    }
-
-    /**
      * Lists all pagina entities.
      *
      * @Route("admin/paginas/", name="admin_paginas_index")
@@ -174,5 +130,53 @@ class PaginaController extends Controller
             ->setAction($this->generateUrl('paginas_delete', array('id' => $pagina->getId())))
             ->setMethod('DELETE')
             ->getForm();
+    }
+
+    /**
+     * Página de contacto.
+     *
+     * @Route("contacto", name="paginas_contacto")
+     * @Method({"GET", "POST"})
+     */
+    public function contactoAction(Request $request, \Swift_Mailer $mailer)
+    {
+        $form = $this->createForm('AppBundle\Form\ContactoType');
+
+        if ($request->isMethod('POST')) {
+            $form->handleRequest($request);
+
+            if ($form->isValid()) {
+                $messageAdmin = (new \Swift_Message('Contacto PREMADE'))
+                    ->setFrom('jl.fernandez@give2get.es')
+                    ->setTo('jl.fernandez@give2get.es')
+                    ->setBody(
+                        $this->renderView('pagina/mail_admin.html.twig', [
+                            'ip' => $request->getClientIp(),
+                            'nombre' => $form->get('nombre')->getData(),
+                            'email' => $form->get('email')->getData(),
+                            'mensaje' => $form->get('mensaje')->getData(),
+                        ])
+                    );
+                $messageUser = (new \Swift_Message('Contacto PREMADE'))
+                    ->setFrom('jl.fernandez@give2get.es')
+                    ->setTo($form->get('email')->getData())
+                    ->setBody(
+                        $this->renderView('pagina/mail_user.html.twig', [
+                            'nombre' => $form->get('nombre')->getData(),
+                            'mensaje' => $form->get('mensaje')->getData(),
+                        ]),
+                        'text/html'
+                    );
+                $mailer->send($messageAdmin);
+                $mailer->send($messageUser);
+
+                $request->getSession()->getFlashBag()->add('success', 'Tu email ha sido enviado. Gracias');
+                return $this->redirect($this->generateUrl('paginas_contacto'));
+            }
+        }
+
+        return $this->render('pagina/contacto.html.twig', [
+            'form' => $form->createView()
+        ]);
     }
 }

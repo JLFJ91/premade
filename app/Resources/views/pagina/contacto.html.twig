@@ -27,12 +27,12 @@
         </div>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="media-container-column col-lg-8" data-form-type="formoid">
+                <div class="media-container-column col-lg-8">
                     <div data-form-alert="" hidden="">Thanks for filling out the form!</div>
-                    {{ form_start(form) }}
+                    {{ form_start(form, {'action': path('paginas_contacto')}) }}
                     {{ form_widget(form) }}
                     <span class="input-group-btn">
-                        <button href="" type="submit" class="btn btn-primary btn-form display-4">¡Contacta!</button>
+                        <input type="submit" class="btn btn-primary btn-form display-4" value="¡Contacta!" />
                     </span>
                     {{ form_end(form) }}
                 </div>
