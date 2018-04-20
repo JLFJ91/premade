@@ -19,7 +19,7 @@ class PaginaController extends Controller
      * @Route("admin/paginas/", name="admin_paginas_index")
      * @Method("GET")
      */
-    public function indexAction()
+    public function adminIndexAction()
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -53,22 +53,6 @@ class PaginaController extends Controller
         return $this->render('pagina/new.html.twig', array(
             'pagina' => $pagina,
             'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a pagina entity.
-     *
-     * @Route("admin/paginas/{id}", name="paginas_show")
-     * @Method("GET")
-     */
-    public function showAction(Pagina $pagina)
-    {
-        $deleteForm = $this->createDeleteForm($pagina);
-
-        return $this->render('pagina/show.html.twig', array(
-            'pagina' => $pagina,
-            'delete_form' => $deleteForm->createView(),
         ));
     }
 

@@ -76,22 +76,6 @@ class EquipoController extends Controller
     }
 
     /**
-     * Finds and displays a equipo entity.
-     *
-     * @Route("admin/equipo/{id}", name="equipo_show")
-     * @Method("GET")
-     */
-    public function showAction(Equipo $equipo)
-    {
-        $deleteForm = $this->createDeleteForm($equipo);
-
-        return $this->render('equipo/show.html.twig', array(
-            'equipo' => $equipo,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
-
-    /**
      * Displays a form to edit an existing equipo entity.
      *
      * @Route("admin/equipo/{id}/edit", name="equipo_edit")

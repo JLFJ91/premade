@@ -4,10 +4,7 @@
 
 {% block body %}
     <section class="mbr-section form1 cid-qN1IGYQXvl mbr-parallax-background" id="form1-1k">
-
-
-        <div class="mbr-overlay" style="opacity: 0.4; background-color: rgb(35, 35, 35);">
-        </div>
+        <div class="mbr-overlay" style="opacity: 0.4; background-color: rgb(35, 35, 35);"></div>
         <div class="container">
             {% for label, flashes in app.session.flashbag.all %}
                 {% for flash in flashes %}
@@ -18,21 +15,25 @@
             {% endfor %}
             <div class="row justify-content-center">
                 <div class="title col-12 col-lg-8">
-                    <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2">¡Contacta con
-                        nosotros!</h2>
-                    <h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-5">Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit. Proin ultrices quam libero.</h3>
+                    <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2">
+                        ¡Contacta con nosotros!
+                    </h2>
+                    <h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-5">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultrices quam libero.
+                    </h3>
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="media-container-column col-lg-8">
-                    <div data-form-alert="" hidden="">Thanks for filling out the form!</div>
+                    <div data-form-alert="" hidden="">
+                        Thanks for filling out the form!
+                    </div>
                     {{ form_start(form, {'action': path('paginas_contacto')}) }}
                     {{ form_widget(form) }}
                     <span class="input-group-btn">
-                        <input type="submit" class="btn btn-primary btn-form display-4" value="¡Contacta!" />
+                        <input type="submit" class="btn btn-primary btn-form display-4" value="¡Contacta!"/>
                     </span>
                     {{ form_end(form) }}
                 </div>

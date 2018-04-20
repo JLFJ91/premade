@@ -3,7 +3,9 @@
 {% block title %}PROYECTOS - {{ parent() }}{% endblock %}
 
 {% block body %}
-    {% include '::admin_blocks/header.html.twig' with { 'h2Title': 'Proyectos', 'addPath': path('proyectos_new')  } %}
+
+    {% include 'blocks/admin/header.html.twig' with { 'h2Title': 'Proyectos', 'addPath': path('proyectos_new')  } %}
+
     <section class="features17 cid-qNub0944hF" id="features17-n">
         <div class="container">
             <div class="row media-row">
@@ -12,7 +14,8 @@
                         <div class="card-wrapper">
                             <div class="card-img">
                                 <a href="{{ path('proyectos_edit', {'id': proyecto.id}) }}">
-                                    <img src="https://img.youtube.com/vi/{{ proyecto.url }}/0.jpg" alt="{{ proyecto.nombre }}">
+                                    <img src="https://img.youtube.com/vi/{{ proyecto.url }}/0.jpg"
+                                         alt="{{ proyecto.nombre }}">
                                 </a>
                             </div>
                             <div class="card-box">

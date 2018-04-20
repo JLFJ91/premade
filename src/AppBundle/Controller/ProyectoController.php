@@ -75,22 +75,6 @@ class ProyectoController extends Controller
     }
 
     /**
-     * Finds and displays a proyecto entity.
-     *
-     * @Route("admin/proyectos/{id}", name="proyectos_show")
-     * @Method("GET")
-     */
-    public function showAction(Proyecto $proyecto)
-    {
-        $deleteForm = $this->createDeleteForm($proyecto);
-
-        return $this->render('proyecto/show.html.twig', array(
-            'proyecto' => $proyecto,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
-
-    /**
      * Displays a form to edit an existing proyecto entity.
      *
      * @Route("admin/proyectos/{id}/edit", name="proyectos_edit")

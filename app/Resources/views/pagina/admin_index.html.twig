@@ -7,13 +7,12 @@
 {% endblock %}
 
 {% block body %}
-    {% include '::admin_blocks/header.html.twig' with { 'h2Title': 'Paginas', 'addPath': path('paginas_new')  } %}
+
+    {% include 'blocks/admin/header.html.twig' with { 'h2Title': 'Paginas', 'addPath': path('paginas_new')  } %}
+
     <section class="section-table cid-qN6ZXrad2L" id="table1-1">
         <div class="container container-table">
             <div class="table-wrapper">
-                <div class="container">
-
-                </div>
                 <div class="container scroll">
                     <table class="table" cellspacing="0">
                         <thead>
@@ -32,16 +31,21 @@
                         <tbody>
                         {% for pagina in paginas %}
                             <tr>
-                                <td class="body-item mbr-fonts-style display-7">{{ pagina.titulo }}</td>
-                                <td class="body-item mbr-fonts-style display-7">{% if pagina.createdAt %}{{ pagina.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
-                                <td class="body-item mbr-fonts-style display-7"><a href="{{ path('paginas_edit', { 'id': pagina.id }) }}" title="Editar"><span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn"></span></a></td>
+                                <td class="body-item mbr-fonts-style display-7">
+                                    {{ pagina.titulo }}
+                                </td>
+                                <td class="body-item mbr-fonts-style display-7">
+                                    {% if pagina.createdAt %}{{ pagina.createdAt|date('Y-m-d H:i:s') }}{% endif %}
+                                </td>
+                                <td class="body-item mbr-fonts-style display-7">
+                                    <a href="{{ path('paginas_edit', { 'id': pagina.id }) }}" title="Editar">
+                                        <span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn"></span>
+                                    </a>
+                                </td>
                             </tr>
                         {% endfor %}
                         </tbody>
                     </table>
-                </div>
-                <div class="container table-info-container">
-
                 </div>
             </div>
         </div>

@@ -18,7 +18,7 @@ class SliderController extends Controller
      * @Route("admin/slider/", name="admin_slider_index")
      * @Method("GET")
      */
-    public function indexAction()
+    public function adminIndexAction()
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -52,22 +52,6 @@ class SliderController extends Controller
         return $this->render('slider/new.html.twig', array(
             'slider' => $slider,
             'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a slider entity.
-     *
-     * @Route("admin/slider/{id}", name="slider_show")
-     * @Method("GET")
-     */
-    public function showAction(Slider $slider)
-    {
-        $deleteForm = $this->createDeleteForm($slider);
-
-        return $this->render('slider/show.html.twig', array(
-            'slider' => $slider,
-            'delete_form' => $deleteForm->createView(),
         ));
     }
 

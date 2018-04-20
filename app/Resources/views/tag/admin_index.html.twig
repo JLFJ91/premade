@@ -7,17 +7,16 @@
 {% endblock %}
 
 {% block body %}
-    {% include '::admin_blocks/header.html.twig' with { 'h2Title': 'Tags', 'addPath': path('tags_new')  } %}
+
+    {% include 'blocks/admin/header.html.twig' with { 'h2Title': 'Tags', 'addPath': path('tags_new')  } %}
+
     <section class="section-table cid-qN6ZXrad2L" id="table1-1">
         <div class="container container-table">
             <div class="table-wrapper">
-                <div class="container">
-
-                </div>
                 <div class="container scroll">
                     <table class="table" cellspacing="0">
                         <thead>
-                        <tr class="table-heads ">
+                        <tr class="table-heads">
                             <th class="head-item mbr-fonts-style display-7">
                                 Tag
                             </th>
@@ -29,15 +28,18 @@
                         <tbody>
                         {% for tag in tags %}
                             <tr>
-                                <td class="body-item mbr-fonts-style display-7">{{ tag.tag }}</td>
-                                <td class="body-item mbr-fonts-style display-7"><a href="{{ path('tags_edit', { 'id': tag.id }) }}" title="Editar"><span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn"></span></a></td>
+                                <td class="body-item mbr-fonts-style display-7">
+                                    {{ tag.tag }}
+                                </td>
+                                <td class="body-item mbr-fonts-style display-7">
+                                    <a href="{{ path('tags_edit', { 'id': tag.id }) }}" title="Editar">
+                                        <span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn"></span>
+                                    </a>
+                                </td>
                             </tr>
                         {% endfor %}
                         </tbody>
                     </table>
-                </div>
-                <div class="container table-info-container">
-
                 </div>
             </div>
         </div>

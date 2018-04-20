@@ -6,8 +6,7 @@
 <div class="container mt-5 pt-2 pb-5">
     <div class="row justify-content-md-center">
         <div class="col-md-4">
-            <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72"
-                 height="72">
+            <img class="mb-4" src="{{ asset(other_img_route ~ 'full_logo128.png') }}" alt="" width="200" >
             <h1 class="h3 mb-3 font-weight-normal">Inicia sesión</h1>
             <form action="{{ path("fos_user_security_check") }}" method="post">
                 {% if csrf_token %}
@@ -17,10 +16,7 @@
                 <input class="form-control" type="text" id="username" name="_username" value="{{ last_username }}" required="required" autocomplete="username" placeholder="Enter username" />
                 <label for="inputPassword" class="sr-only">Password</label>
                 <input class="form-control" type="password" id="password" name="_password" required="required" autocomplete="current-password" placeholder="Enter password" />
-                <div class="checkbox mb-3">
-                    <label><input type="checkbox" value="" checked>Remember me</label>
-                </div>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Inicia sesión</button>
+                <input class="btn btn-primary mt-4" type="submit" value="Inicia sesión" />
                 <p class="mt-5 mb-3 text-muted">&copy;2018</p>
             </form>
         </div>
