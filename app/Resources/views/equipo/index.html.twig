@@ -35,9 +35,13 @@
                 tincidunt orci velit, ac efficitur eros tristique non.&nbsp;
             </h3>
             <div class="row media-row">
-                {% for socio in socios %}
+                {% for socio in pagination %}
                     {% include 'equipo/blocks/socio.html.twig' with {'socio': socio} %}
                 {% endfor %}
+            </div>
+
+            <div class="navigation d-flex justify-content-center mt-4">
+                {{ knp_pagination_render(pagination) }}
             </div>
         </div>
     </section>

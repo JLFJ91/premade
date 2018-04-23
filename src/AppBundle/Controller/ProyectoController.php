@@ -18,16 +18,23 @@ class ProyectoController extends Controller
      * @Route("proyectos/", name="proyectos_index")
      * @Method("GET")
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
+        $paginator = $this->get('knp_paginator');
+
         $ultimoProyecto = $em->getRepository('AppBundle:Proyecto')->findBy([], ['createdAt' => 'DESC'], 1);
         $proyectos = $em->getRepository('AppBundle:Proyecto')->findBy([], ['createdAt' => 'DESC']);
+        $pagination = $paginator->paginate(
+            $proyectos,
+            $request->query->getInt('page', 1),
+            12
+        );
 
         return $this->render('proyecto/index.html.twig', array(
             'ultimoProyecto' => $ultimoProyecto,
-            'proyectos' => $proyectos,
+            'pagination' => $pagination,
         ));
     }
     
@@ -37,14 +44,21 @@ class ProyectoController extends Controller
      * @Route("admin/proyectos/", name="admin_proyectos_index")
      * @Method("GET")
      */
-    public function adminIndexAction()
+    public function adminIndexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
+        $paginator = $this->get('knp_paginator');
+
         $proyectos = $em->getRepository('AppBundle:Proyecto')->findAll();
+        $pagination = $paginator->paginate(
+            $proyectos,
+            $request->query->getInt('page', 1),
+            12
+        );
 
         return $this->render('proyecto/admin_index.html.twig', array(
-            'proyectos' => $proyectos,
+            'pagination' => $pagination,
         ));
     }
 

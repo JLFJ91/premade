@@ -18,14 +18,21 @@ class SliderController extends Controller
      * @Route("admin/slider/", name="admin_slider_index")
      * @Method("GET")
      */
-    public function adminIndexAction()
+    public function adminIndexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
+        $paginator = $this->get('knp_paginator');
+
         $sliders = $em->getRepository('AppBundle:Slider')->findAll();
+        $pagination = $paginator->paginate(
+            $sliders,
+            $request->query->getInt('page', 1),
+            12
+        );
 
         return $this->render('slider/admin_index.html.twig', array(
-            'sliders' => $sliders,
+            'pagination' => $pagination,
         ));
     }
 

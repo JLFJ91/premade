@@ -21,6 +21,8 @@ class AppKernel extends Kernel
 
             new Artgris\Bundle\FileManagerBundle\ArtgrisFileManagerBundle(),
 
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+
             new AppBundle\AppBundle(),
         ];
 

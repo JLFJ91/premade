@@ -19,16 +19,25 @@ class EquipoController extends Controller
      * @Route("equipo/", name="equipo_index")
      * @Method("GET")
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
+
+        $paginator = $this->get('knp_paginator');
+
 
         $fundadores = $em->getRepository('AppBundle:Equipo')->findBy(['tipo' => 'fundador'], ['nombre' => 'ASC'], 3);
         $socios = $em->getRepository('AppBundle:Equipo')->findBy(['tipo' => 'socio'], ['nombre' => 'ASC']);
 
+        $pagination = $paginator->paginate(
+            $socios,
+            $request->query->getInt('page', 1),
+            8
+        );
+
         return $this->render('equipo/index.html.twig', array(
             'fundadores' => $fundadores,
-            'socios' => $socios,
+            'pagination' => $pagination,
         ));
     }
     
@@ -38,14 +47,21 @@ class EquipoController extends Controller
      * @Route("admin/equipo/", name="admin_equipo_index")
      * @Method("GET")
      */
-    public function adminIndexAction()
+    public function adminIndexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
+        $paginator = $this->get('knp_paginator');
+
         $equipos = $em->getRepository('AppBundle:Equipo')->findAll();
+        $pagination = $paginator->paginate(
+            $equipos,
+            $request->query->getInt('page', 1),
+            12
+        );
 
         return $this->render('equipo/admin_index.html.twig', array(
-            'equipos' => $equipos,
+            'pagination' => $pagination,
         ));
     }
 

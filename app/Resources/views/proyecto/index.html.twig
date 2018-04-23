@@ -32,7 +32,7 @@
                     <div class="mbr-gallery-layout-default">
                         <div>
                             <div>
-                                {% for proyecto in proyectos %}
+                                {% for proyecto in pagination %}
                                     {% include 'proyecto/blocks/video_gallery.html.twig' with {'proyecto': proyecto, 'id': loop.index0} %}
                                 {% endfor %}
                             </div>
@@ -47,7 +47,7 @@
                         <div class="modal-content">
                             <div class="modal-body">
                                 <div class="carousel-inner">
-                                    {% for proyecto in proyectos %}
+                                    {% for proyecto in pagination %}
                                         {% include 'proyecto/blocks/video_lightbox.html.twig' with {'proyecto': proyecto, 'id': loop.index0} %}
                                     {% endfor %}
                                 </div>
@@ -69,6 +69,10 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="navigation d-flex justify-content-center mt-4">
+            {{ knp_pagination_render(pagination) }}
         </div>
     </section>
 {% endblock %}
