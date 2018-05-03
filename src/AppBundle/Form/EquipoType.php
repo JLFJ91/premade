@@ -41,7 +41,8 @@ class EquipoType extends AbstractType
                     return $er->createQueryBuilder('p')
                         ->orderBy('p.nombre', 'ASC');
                 },
-                'multiple' => true
+                'multiple' => true,
+                'required' => false
             ])
             ->add('tags', EntityType::class, [
                 'class' => 'AppBundle:Tag',
@@ -49,7 +50,8 @@ class EquipoType extends AbstractType
                     return $er->createQueryBuilder('t')
                         ->orderBy('t.tag', 'ASC');
                 },
-                'multiple' => true
+                'multiple' => true,
+                'required' => false
             ]);
     }/**
      * {@inheritdoc}

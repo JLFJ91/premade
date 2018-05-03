@@ -37,7 +37,7 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
-    form_themes: ['bootstrap_4_layout.html.twig']
+    form_themes: ['/templates/Form/bootstrap_4_layout_custom.html.twig']
     globals:
         equipo_img_route: uploads/equipo/
         proyecto_img_route: uploads/proyecto/

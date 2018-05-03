@@ -34,6 +34,11 @@
                 consectetur adipiscing elit. Proin ultrices quam libero, at vulputate velit aliquet lacinia. Donec
                 tincidunt orci velit, ac efficitur eros tristique non.&nbsp;
             </h3>
+        </div>
+        <div class="container mb-4">
+            {% include 'buscador/buscador.html.twig' with {'buscadorForm': buscadorForm} %}
+        </div>
+        <div class="container align-center">
             <div class="row media-row">
                 {% for socio in pagination %}
                     {% include 'equipo/blocks/socio.html.twig' with {'socio': socio} %}

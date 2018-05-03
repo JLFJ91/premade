@@ -25,7 +25,8 @@ class ProyectoType extends AbstractType
                         ->orderBy('e.nombre', 'ASC');
                 },
                 'label' => 'Equipo',
-                'multiple' => true
+                'multiple' => true,
+                'required' => false
             ]);
     }/**
      * {@inheritdoc}
