@@ -8,7 +8,11 @@
 
 {% block body %}
 
-    {% include 'blocks/admin/header.html.twig' with { 'h2Title': 'Paginas', 'addPath': path('paginas_new')  } %}
+    {% include 'blocks/admin/header.html.twig' with {
+        'title': 'Páginas',
+        'addPath': path('paginas_new')
+        }
+    %}
 
     <section class="section-table cid-qN6ZXrad2L" id="table1-1">
         <div class="container container-table">

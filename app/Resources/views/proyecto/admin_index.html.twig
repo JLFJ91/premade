@@ -4,7 +4,11 @@
 
 {% block body %}
 
-    {% include 'blocks/admin/header.html.twig' with { 'h2Title': 'Proyectos', 'addPath': path('proyectos_new')  } %}
+    {% include 'blocks/admin/header.html.twig' with {
+        'title': 'Proyectos',
+        'addPath': path('proyectos_new')
+        }
+    %}
 
     <section class="features17 cid-qNub0944hF" id="features17-n">
         <div class="container">

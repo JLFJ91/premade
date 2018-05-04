@@ -1,7 +1,20 @@
 {% extends 'base_admin.html.twig' %}
 {% block body %}
 
-    {% include 'blocks/admin/header.html.twig' with { 'h2Title': h2Title, 'addPath': path('equipo_new')  } %}
+    {% if type == 'edit' %}
+        {% include 'blocks/admin/header.html.twig' with {
+            'title': 'Editar "' ~ equipo.nombre ~ ' ' ~ equipo.apellidos ~ '"',
+            'addPath': path('equipo_new', {'id': equipo.id}),
+            'deletePath': path('equipo_delete', {'id': equipo.id})
+            }
+        %}
+    {% else %}
+        {% include 'blocks/admin/header.html.twig' with {
+            'title': 'Nuevo Fundador/Socio',
+            'returnPath': path('admin_equipo_index')
+            }
+        %}
+    {% endif %}
 
     <div class="container pl-4 pt-4 pb-5">
         {{ form_start(form) }}
@@ -33,7 +46,11 @@
         </div>
         {{ form_widget(form) }}
         <div class="text-center">
-            <input type="submit" class="btn btn-primary" value="Enviar" />
+            {% if type == 'edit' %}
+                <input type="submit" class="btn btn-primary" value="Editar" />
+            {% else %}
+                <input type="submit" class="btn btn-primary" value="Nuevo" />
+            {% endif %}
         </div>
         {{ form_end(form) }}
     </div>

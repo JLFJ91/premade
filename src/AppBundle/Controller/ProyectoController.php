@@ -65,7 +65,7 @@ class ProyectoController extends Controller
     /**
      * Creates a new proyecto entity.
      *
-     * @Route("/new", name="proyectos_new")
+     * @Route("/admin/proyectos/new", name="proyectos_new")
      * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
