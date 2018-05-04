@@ -26,7 +26,8 @@ class ProyectoType extends AbstractType
                 },
                 'label' => 'Equipo',
                 'multiple' => true,
-                'required' => false
+                'required' => false,
+                'by_reference' => false,
             ]);
     }/**
      * {@inheritdoc}

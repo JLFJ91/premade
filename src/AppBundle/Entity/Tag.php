@@ -86,6 +86,7 @@ class Tag
     public function addEquipo(\AppBundle\Entity\Equipo $equipo)
     {
         $this->equipos[] = $equipo;
+        $equipo->addTag($this);
 
         return $this;
     }
@@ -98,6 +99,7 @@ class Tag
     public function removeEquipo(\AppBundle\Entity\Equipo $equipo)
     {
         $this->equipos->removeElement($equipo);
+        $equipo->removeTag($this);
     }
 
     /**

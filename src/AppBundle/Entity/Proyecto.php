@@ -56,7 +56,6 @@ class Proyecto
      */
     private $equipos;
 
-
     /**
      * Constructor
      */
@@ -181,6 +180,7 @@ class Proyecto
     public function addEquipo(\AppBundle\Entity\Equipo $equipo)
     {
         $this->equipos[] = $equipo;
+        $equipo->addProyecto($this);
 
         return $this;
     }
@@ -193,6 +193,7 @@ class Proyecto
     public function removeEquipo(\AppBundle\Entity\Equipo $equipo)
     {
         $this->equipos->removeElement($equipo);
+        $equipo->removeProyecto($this);
     }
 
     /**
@@ -221,6 +222,4 @@ class Proyecto
     {
        return $this->nombre;
     }
-
-
 }
