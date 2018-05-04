@@ -53,7 +53,7 @@ class SliderController extends Controller
             $em->persist($slider);
             $em->flush();
 
-            return $this->redirectToRoute('slider_show', array('id' => $slider->getId()));
+            return $this->redirectToRoute('slider_edit', array('id' => $slider->getId()));
         }
 
         return $this->render('slider/new.html.twig', array(

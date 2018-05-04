@@ -46,7 +46,7 @@ class TagController extends Controller
             $em->persist($tag);
             $em->flush();
 
-            return $this->redirectToRoute('tags_show', array('id' => $tag->getId()));
+            return $this->redirectToRoute('tags_edit', array('id' => $tag->getId()));
         }
 
         return $this->render('tag/new.html.twig', array(

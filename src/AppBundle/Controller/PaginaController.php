@@ -47,7 +47,7 @@ class PaginaController extends Controller
             $em->persist($pagina);
             $em->flush();
 
-            return $this->redirectToRoute('paginas_show', array('id' => $pagina->getId()));
+            return $this->redirectToRoute('paginas_edit', array('id' => $pagina->getId()));
         }
 
         return $this->render('pagina/new.html.twig', array(
