@@ -122,19 +122,26 @@ class EquipoController extends Controller
      * Deletes a equipo entity.
      *
      * @Route("admin/equipo/{id}", name="equipo_delete")
-     * @Method("DELETE")
+     * @Method({"GET", "DELETE"})
      */
     public function deleteAction(Request $request, Equipo $equipo)
     {
         $form = $this->createDeleteForm($equipo);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($equipo);
-            $em->flush();
+        if ($request->isMethod('DELETE')) {
+            if ($form->isSubmitted() && $form->isValid()) {
+                $em = $this->getDoctrine()->getManager();
+                $em->remove($equipo);
+                $em->flush();
+            }
         }
-
+        elseif ($request->isMethod('GET')) {
+            return $this->render('equipo/delete.html.twig', array(
+                'equipo' => $equipo,
+                'delete_form' => $form->createView(),
+            ));
+        }
         return $this->redirectToRoute('admin_equipo_index');
     }
 
