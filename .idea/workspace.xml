@@ -1,46 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list id="6a0318d1-c09f-437b-9f00-5ac0d20b34ad" name="Premade" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list id="6a0318d1-c09f-437b-9f00-5ac0d20b34ad" name="Premade" comment="" />
     <list default="true" id="44edafe4-38c6-4984-bc52-081235f104a0" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../newsletter/otro/2018-05-25-arrow/acceso_seguro_Web_files/648_slider_seguridad.jpg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../newsletter/otro/2018-05-22-trendmicro/WBN6___Take_advantage_of_Virtualisation_and_the_Cloud__ES__1___Invite___ES.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../newsletter/otro/2018-05-25-arrow/acceso_seguro_Web.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/equipo/blocks/tags.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/pagina/delete.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/proyecto/delete.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/slider/delete.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/tag/delete.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../netsecure/app/config/services.yml" afterPath="$PROJECT_DIR$/../netsecure/app/config/services.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/premade.iml" afterPath="$PROJECT_DIR$/.idea/premade.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/blocks/user/footer.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/blocks/user/footer.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/blocks/user/navbar.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/blocks/user/navbar.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/equipo/blocks/fundador.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/equipo/blocks/fundador.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/equipo/blocks/social.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/equipo/blocks/social.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/equipo/blocks/socio.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/equipo/blocks/socio.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/equipo/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/equipo/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/main/blocks/features.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/main/blocks/features.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/main/blocks/slider.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/main/blocks/slider.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/pagina/admin_index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/pagina/admin_index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/pagina/contacto.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/pagina/contacto.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/proyecto/blocks/slider.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/proyecto/blocks/slider.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/equipo/blocks/tags.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/equipo/blocks/tags.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/proyecto/blocks/video_gallery.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/proyecto/blocks/video_gallery.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/proyecto/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/proyecto/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/slider/admin_index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/slider/admin_index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/tag/admin_index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/tag/admin_index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/PaginaController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/PaginaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ProyectoController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ProyectoController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/SliderController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/SliderController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/TagController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/TagController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/gallery/style.css" afterPath="$PROJECT_DIR$/web/assets/gallery/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/mobirise/css/mbr-additional.css" afterPath="$PROJECT_DIR$/web/assets/mobirise/css/mbr-additional.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/theme/css/style.css" afterPath="$PROJECT_DIR$/web/assets/theme/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/theme/js/script.js" afterPath="$PROJECT_DIR$/web/assets/theme/js/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Proyecto.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Proyecto.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Form/ProyectoType.php" afterPath="$PROJECT_DIR$/src/AppBundle/Form/ProyectoType.php" />
     </list>
     <ignored path=".idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,21 +38,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../netsecureBootstrap4/app/Resources/views/noticia/index.html.twig">
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="14" />
+            <state relative-caret-position="112">
+              <caret line="28" column="51" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../netsecureBootstrap4/vendor/avanzu/admin-theme-bundle/Resources/views/Sidebar/menu.html.twig">
+      <file leaf-file-name="Proyecto.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Proyecto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="29" />
+            <state relative-caret-position="112">
+              <caret line="176" column="34" lean-forward="false" selection-start-line="176" selection-start-column="34" selection-end-line="176" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProyectoType.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/ProyectoType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="27" column="36" lean-forward="false" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="video_gallery.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/proyecto/blocks/video_gallery.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/proyecto/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="91" column="27" lean-forward="false" selection-start-line="91" selection-start-column="27" selection-end-line="91" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -160,7 +161,7 @@
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="SYNC" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../netsecureBootstrap4" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$/../netsecureViews" value="master" />
@@ -170,11 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../netsecureBootstrap4/web/assets/netsecure/scss/_variables.scss" />
-        <option value="$PROJECT_DIR$/../netsecureBootstrap4/app/Resources/views/blocks/user/footer.html.twig" />
-        <option value="$PROJECT_DIR$/../netsecureBootstrap4/app/Resources/views/blocks/user/last-news-aside.html.twig" />
-        <option value="$PROJECT_DIR$/../netsecureBootstrap4/app/Resources/views/blocks/user/noticias-secundarias.html.twig" />
-        <option value="$PROJECT_DIR$/../netsecureBootstrap4/app/Resources/views/blocks/user/slider.html.twig" />
         <option value="$PROJECT_DIR$/../netsecureBootstrap4/app/Resources/views/blocks/user/ultima-noticia.html.twig" />
         <option value="$PROJECT_DIR$/../netsecureBootstrap4/app/Resources/views/blocks/user/noticia-horizontal.html.twig" />
         <option value="$PROJECT_DIR$/../netsecureBootstrap4/web/assets/netsecure/scss/netsecure_styles.scss" />
@@ -221,6 +217,11 @@
         <option value="$PROJECT_DIR$/../netsecureBootstrap4/app/Resources/AvanzuAdminThemeBundle/views/layout/default-layout.html.twig" />
         <option value="$PROJECT_DIR$/../netsecureBootstrap4/app/Resources/AvanzuAdminThemeBundle/views/layout/macros.html.twig" />
         <option value="$PROJECT_DIR$/../netsecureBootstrap4/app/Resources/views/noticia/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Proyecto.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Form/ProyectoType.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/equipo/blocks/tags.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/proyecto/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/proyecto/blocks/video_gallery.html.twig" />
       </list>
     </option>
   </component>
@@ -262,102 +263,51 @@
           <expand>
             <path>
               <item name="premade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netsecureBootstrap4" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="premade" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="premade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netsecureBootstrap4" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="premade" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="premade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netsecureBootstrap4" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="premade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netsecureBootstrap4" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="premade" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="AvanzuAdminThemeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="premade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netsecureBootstrap4" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="AvanzuAdminThemeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="premade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netsecureBootstrap4" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="AvanzuAdminThemeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="layout" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="premade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netsecureBootstrap4" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="premade" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="premade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netsecureBootstrap4" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="premade" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="noticia" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="proyecto" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="premade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netsecureBootstrap4" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="premade" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="premade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netsecureBootstrap4" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="avanzu" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="premade" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="premade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netsecureBootstrap4" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="avanzu" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin-theme-bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="premade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netsecureBootstrap4" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="avanzu" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin-theme-bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="premade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netsecureBootstrap4" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="avanzu" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin-theme-bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="premade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netsecureBootstrap4" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="avanzu" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin-theme-bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Sidebar" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="premade" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Form" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -468,12 +418,12 @@
       <workItem from="1527578570538" duration="13262000" />
       <workItem from="1527665660120" duration="13537000" />
       <workItem from="1527751790953" duration="13259000" />
-      <workItem from="1527836760419" duration="1313000" />
+      <workItem from="1527836760419" duration="5290000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="320645000" />
+    <option name="totallyTimeSpent" value="324622000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -486,6 +436,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22919819" sideWeight="0.5057283" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -494,7 +445,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27380952" sideWeight="0.49394855" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15355521" sideWeight="0.5057283" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28911564" sideWeight="0.48789713" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28911564" sideWeight="0.48789713" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32980332" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -566,83 +517,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../netsecureBootstrap4/src/AppBundle/EventListener/MenuItemListListener.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="34" column="48" lean-forward="true" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../netsecureBootstrap4/vendor/avanzu/admin-theme-bundle/Resources/views/Partials/_footer.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../netsecureBootstrap4/vendor/avanzu/admin-theme-bundle/Event/KnpMenuEvent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-534">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../netsecureBootstrap4/vendor/avanzu/admin-theme-bundle/Command/BuildAssetsCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../netsecureBootstrap4/vendor/avanzu/admin-theme-bundle/Controller/SidebarController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="53" column="84" lean-forward="true" selection-start-line="53" selection-start-column="84" selection-end-line="53" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../netsecureBootstrap4/vendor/avanzu/admin-theme-bundle/Resources/views/Sidebar/search-form.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../netsecureBootstrap4/vendor/avanzu/admin-theme-bundle/Resources/views/Partials/_menu.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-582">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../netsecureBootstrap4/vendor/avanzu/admin-theme-bundle/Resources/views/Security/login.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../netsecureBootstrap4/vendor/avanzu/admin-theme-bundle/Resources/views/layout/form-theme.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1938">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../netsecureBootstrap4/vendor/avanzu/admin-theme-bundle/Resources/views/Default/login.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../netsecureBootstrap4/vendor/avanzu/admin-theme-bundle/Resources/views/Sidebar/knp-menu.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../netsecureBootstrap4/vendor/avanzu/admin-theme-bundle/Helper/ContextHelper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-64">
@@ -903,6 +777,94 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="28" column="51" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Slider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561">
+          <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="35" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/SliderType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Proyecto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="176" column="34" lean-forward="false" selection-start-line="176" selection-start-column="34" selection-end-line="176" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/proyecto/blocks/form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/ProyectoType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="27" column="36" lean-forward="false" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/equipo/blocks/tags.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/equipo/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="20" column="96" lean-forward="false" selection-start-line="20" selection-start-column="96" selection-end-line="20" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/proyecto/admin_index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="42" column="81" lean-forward="true" selection-start-line="42" selection-start-column="81" selection-end-line="42" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/proyecto/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="91" column="27" lean-forward="false" selection-start-line="91" selection-start-column="27" selection-end-line="91" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/proyecto/blocks/video_gallery.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
           <folding />
         </state>
       </provider>
