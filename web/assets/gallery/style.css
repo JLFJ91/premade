@@ -20,7 +20,7 @@
   position: absolute;
   top: calc(50% - 32px);
   left: calc(50% - 24px);
-  font-family: 'MobiriseIcons' !important;
+  font-family: 'Font Awesome 5 Free' !important;
   font-size: 3rem !important;
   color: #fff;
   opacity: 0;
@@ -31,7 +31,7 @@
   content: '\e96b'; }
 
 .mbr-gallery .icon-video::before {
-  content: '\e95c'; }
+  content: '\f144'; }
 
 .mbr-gallery .mbr-gallery-item > div:hover .icon-focus,
 .mbr-gallery .mbr-gallery-item > div:hover .icon-video {

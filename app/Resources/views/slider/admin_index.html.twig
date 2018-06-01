@@ -5,10 +5,9 @@
 {% block body %}
 
     {% include 'blocks/admin/header.html.twig' with {
-        'title': 'Slider',
-        'addPath': path('slider_new')
-        }
-    %}
+    'title': 'Slider',
+    'addPath': path('slider_new')
+    } %}
 
     <section class="features17 cid-qNub0944hF" id="features17-n">
         <div class="container">
@@ -19,9 +18,15 @@
                             <div class="card-img">
                                 <a href="{{ path('slider_edit', {'id': slider.id}) }}">
                                     {% if slider.tipo == 'image' %}
-                                        <img src="{{ asset(slider_img_route ~ slider.url) }}" alt="{{ slider.titulo }}">
+                                        {% if slider.url is empty %}
+                                            <img src="{{ asset(other_img_route ~ 'no_image_available.jpg') }}"
+                                                 alt="{{ slider.titulo }}">
+                                        {% else %}
+                                            <img src="{{ asset(slider_img_route ~ slider.url) }}"
+                                                 alt="{{ slider.titulo }}">
+                                        {% endif %}
                                     {% else %}
-                                        <img src="{{ asset(slider_img_route ~ 'no-image.jpg') }}"
+                                        <img src="{{ asset(other_img_route ~ 'no_image_available.jpg') }}"
                                              alt="{{ slider.titulo }}">
                                     {% endif %}
                                 </a>

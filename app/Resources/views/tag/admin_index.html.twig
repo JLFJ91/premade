@@ -39,6 +39,9 @@
                                     <a href="{{ path('tags_edit', { 'id': tag.id }) }}" title="Editar">
                                         <span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn"></span>
                                     </a>
+                                    <a href="{{ path('tags_delete', { 'id': tag.id }) }}" title="Eliminar">
+                                        <span class="mbri-trash mbr-iconfont mbr-iconfont-btn"></span>
+                                    </a>
                                 </td>
                             </tr>
                         {% endfor %}

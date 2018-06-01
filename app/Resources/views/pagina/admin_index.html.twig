@@ -45,6 +45,9 @@
                                     <a href="{{ path('paginas_edit', { 'id': pagina.id }) }}" title="Editar">
                                         <span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn"></span>
                                     </a>
+                                    <a href="{{ path('paginas_delete', { 'id': pagina.id }) }}" title="Eliminar">
+                                        <span class="mbri-trash mbr-iconfont mbr-iconfont-btn"></span>
+                                    </a>
                                 </td>
                             </tr>
                         {% endfor %}

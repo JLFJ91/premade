@@ -85,19 +85,26 @@ class PaginaController extends Controller
      * Deletes a pagina entity.
      *
      * @Route("admin/paginas/{id}", name="paginas_delete")
-     * @Method("DELETE")
+     * @Method({"GET", "DELETE"})
      */
     public function deleteAction(Request $request, Pagina $pagina)
     {
         $form = $this->createDeleteForm($pagina);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($pagina);
-            $em->flush();
+        if ($request->isMethod('DELETE')) {
+            if ($form->isSubmitted() && $form->isValid()) {
+                $em = $this->getDoctrine()->getManager();
+                $em->remove($pagina);
+                $em->flush();
+            }
         }
-
+        elseif ($request->isMethod('GET')) {
+            return $this->render('pagina/delete.html.twig', array(
+                'pagina' => $pagina,
+                'delete_form' => $form->createView(),
+            ));
+        }
         return $this->redirectToRoute('admin_paginas_index');
     }
 
@@ -131,10 +138,10 @@ class PaginaController extends Controller
 
             if ($form->isValid()) {
                 $messageAdmin = (new \Swift_Message('Contacto PREMADE'))
-                    ->setFrom('jl.fernandez@give2get.es')
-                    ->setTo('jl.fernandez@give2get.es')
+                    ->setFrom('contacto@premade.es')
+                    ->setTo('contacto@premade.es')
                     ->setBody(
-                        $this->renderView('pagina/mail_admin.html.twig', [
+                        $this->renderView('pagina/blocks/mail_admin.html.twig', [
                             'ip' => $request->getClientIp(),
                             'nombre' => $form->get('nombre')->getData(),
                             'email' => $form->get('email')->getData(),
@@ -142,10 +149,10 @@ class PaginaController extends Controller
                         ])
                     );
                 $messageUser = (new \Swift_Message('Contacto PREMADE'))
-                    ->setFrom('jl.fernandez@give2get.es')
+                    ->setFrom('contacto@premade.es')
                     ->setTo($form->get('email')->getData())
                     ->setBody(
-                        $this->renderView('pagina/mail_user.html.twig', [
+                        $this->renderView('pagina/blocks/mail_user.html.twig', [
                             'nombre' => $form->get('nombre')->getData(),
                             'mensaje' => $form->get('mensaje')->getData(),
                         ]),

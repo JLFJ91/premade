@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../cinepremade/.idea/cinepremade.iml" filepath="$PROJECT_DIR$/../cinepremade/.idea/cinepremade.iml" />
       <module fileurl="file://$PROJECT_DIR$/../netsecure/.idea/netsecure.iml" filepath="$PROJECT_DIR$/../netsecure/.idea/netsecure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../netsecureBootstrap4/.idea/netsecureBootstrap4.iml" filepath="$PROJECT_DIR$/../netsecureBootstrap4/.idea/netsecureBootstrap4.iml" />
       <module fileurl="file://$PROJECT_DIR$/../netsecureViews/.idea/netsecureViews.iml" filepath="$PROJECT_DIR$/../netsecureViews/.idea/netsecureViews.iml" />
       <module fileurl="file://$PROJECT_DIR$/../newsletter/.idea/newsletter.iml" filepath="$PROJECT_DIR$/../newsletter/.idea/newsletter.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/premade.iml" filepath="$PROJECT_DIR$/.idea/premade.iml" />

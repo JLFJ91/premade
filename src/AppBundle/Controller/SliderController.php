@@ -91,19 +91,26 @@ class SliderController extends Controller
      * Deletes a slider entity.
      *
      * @Route("admin/slider/{id}", name="slider_delete")
-     * @Method("DELETE")
+     * @Method({"GET", "DELETE"})
      */
     public function deleteAction(Request $request, Slider $slider)
     {
         $form = $this->createDeleteForm($slider);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($slider);
-            $em->flush();
+        if ($request->isMethod('DELETE')) {
+            if ($form->isSubmitted() && $form->isValid()) {
+                $em = $this->getDoctrine()->getManager();
+                $em->remove($slider);
+                $em->flush();
+            }
         }
-
+        elseif ($request->isMethod('GET')) {
+            return $this->render('slider/delete.html.twig', array(
+                'slider' => $slider,
+                'delete_form' => $form->createView(),
+            ));
+        }
         return $this->redirectToRoute('admin_slider_index');
     }
 

@@ -117,19 +117,26 @@ class ProyectoController extends Controller
      * Deletes a proyecto entity.
      *
      * @Route("admin/proyectos/{id}", name="proyectos_delete")
-     * @Method("DELETE")
+     * @Method({"GET", "DELETE"})
      */
     public function deleteAction(Request $request, Proyecto $proyecto)
     {
         $form = $this->createDeleteForm($proyecto);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($proyecto);
-            $em->flush();
+        if ($request->isMethod('DELETE')) {
+            if ($form->isSubmitted() && $form->isValid()) {
+                $em = $this->getDoctrine()->getManager();
+                $em->remove($proyecto);
+                $em->flush();
+            }
         }
-
+        elseif ($request->isMethod('GET')) {
+            return $this->render('proyecto/delete.html.twig', array(
+                'proyecto' => $proyecto,
+                'delete_form' => $form->createView(),
+            ));
+        }
         return $this->redirectToRoute('admin_proyectos_index');
     }
 

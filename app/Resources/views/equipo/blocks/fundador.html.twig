@@ -13,7 +13,9 @@
                 {{ fundador.nombre }} {{ fundador.apellidos }}
             </div>
             <small class="mbr-author-desc mbr-italic mbr-light mbr-fonts-style display-7">
-                Developer
+                <p>
+                    {% include 'equipo/blocks/tags.html.twig' with {'tags': fundador.tags} %}
+                </p>
             </small>
             <div class="pt-2">
                 {% include 'equipo/blocks/social.html.twig' with {'equipo': fundador} %}

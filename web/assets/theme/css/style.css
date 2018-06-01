@@ -345,8 +345,7 @@ nav .mbr-section-btn {
     animation: arrowdown 1.7s ease-in-out infinite; }
     .mbr-arrow > a > i {
       position: absolute;
-      top: -2px;
-      left: 15px;
+      left: 20px;
       font-size: 2rem; }
 
 @keyframes arrowdown {

@@ -84,19 +84,26 @@ class TagController extends Controller
      * Deletes a tag entity.
      *
      * @Route("admin/tags/{id}", name="tags_delete")
-     * @Method("DELETE")
+     * @Method({"GET", "DELETE"})
      */
     public function deleteAction(Request $request, Tag $tag)
     {
         $form = $this->createDeleteForm($tag);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($tag);
-            $em->flush();
+        if ($request->isMethod('DELETE')) {
+            if ($form->isSubmitted() && $form->isValid()) {
+                $em = $this->getDoctrine()->getManager();
+                $em->remove($tag);
+                $em->flush();
+            }
         }
-
+        elseif ($request->isMethod('GET')) {
+            return $this->render('tag/delete.html.twig', array(
+                'tag' => $tag,
+                'delete_form' => $form->createView(),
+            ));
+        }
         return $this->redirectToRoute('admin_tags_index');
     }
 

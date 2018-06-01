@@ -9,7 +9,9 @@
             </p>
         </div>
         <div class="item-role px-2">
-            <p>Developer</p>
+            <p>
+                {% include 'equipo/blocks/tags.html.twig' with {'tags': socio.tags} %}
+            </p>
         </div>
         <div class="item-social pt-2">
             {% include 'equipo/blocks/social.html.twig' with {'equipo': socio} %}

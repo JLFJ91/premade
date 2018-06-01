@@ -23,5 +23,7 @@
     <orderEntry type="module" module-name="netsecure" />
     <orderEntry type="module" module-name="newsletter" />
     <orderEntry type="module" module-name="netsecureViews" />
+    <orderEntry type="module" module-name="netsecureBootstrap4" />
+    <orderEntry type="module" module-name="cinepremade" />
   </component>
 </module>
